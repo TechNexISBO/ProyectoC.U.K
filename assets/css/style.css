@@ -28,6 +28,10 @@ header {
     filter: drop-shadow(3px 2px 5px rgb(22, 21, 21));
 }
 
+.main-menu {
+    float: right;
+}
+
 .main-menu ul {
     margin: 0;
     padding: 0;
@@ -54,4 +58,8 @@ header {
 
 .main-menu ul li:hover a {
     color: #fff;
+}
+
+.menu-list-titles {
+    max-width: 100px;
 }
