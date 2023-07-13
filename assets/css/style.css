@@ -3,12 +3,55 @@
     padding: 0;
 }
 
-header {}
-
-.nombreLogo {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    justify-items: center;
+    padding: 5px;
+    background-color: #006FAB;
+}
 
+.zonaA {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 15px;
+}
+
+.zonaA h2 {
+    text-align: center;
+    margin-left: 15px;
+    font-size: 30px;
+}
+
+.zonaA img {
+    filter: drop-shadow(3px 2px 5px rgb(22, 21, 21));
+}
+
+.main-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.main-menu ul li a {
+    padding: 20px;
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    background: #21263E;
+}
+
+.main-menu ul li ul {
+    display: none;
+}
+
+.main-menu ul li:hover ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-menu ul li:hover a {
+    color: #fff;
 }
