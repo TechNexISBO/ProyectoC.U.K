@@ -7,23 +7,40 @@
     <title>TechNex</title>
   </head>
   <body>
+    <a name="inicio"></a>
     <!--Barra de Navegacion-->
     <header>
       <div class="nombre-logo">
-        <img src="img/logosinfondo.png" alt="logoDeLaEmpresa" width="125" />
+        <img src="img/logosinfondo.png" alt="logoDeLaEmpresa" class="logo"
+        width="125"" />
         <h2>TechNex</h2>
       </div>
-      <div class="links">
-        <ul class="links-hijo">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Sobre Nosotros</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </div>
+
+      <input type="checkbox" id="menu" />
+      <label for="menu">
+        <img src="img/menu.png" alt="iconoDelMenu" class="menuIcono" />
+      </label>
+
+      <ul class="menu">
+        <li class="link-header"><a href="#inicio" class="item">Inicio</a></li>
+        <li class="link-header">
+          <a href="#sobreNosotros" class="item">Sobre Nosotros</a>
+        </li>
+        <li class="link-header">
+          <a href="#nuestrasPaginas" class="item">Nuestras Paginas</a>
+        </li>
+        <li class="link-header">
+          <a href="#miembros" class="item">Miembros</a>
+        </li>
+        <li class="link-header">
+          <a href="#contacto" class="item">Contacto</a>
+        </li>
+      </ul>
     </header>
 
     <!--Sobre Nosotros-->
     <section class="sobreNosotros">
+      <a name="sobreNosotros"></a>
       <h2>Sobre Nosotros</h2>
       <div class="sobreNosotros-hijo">
         <p>
@@ -37,6 +54,7 @@
 
     <!--Nuestras Paginas-->
     <section class="paginas">
+      <a name="nuestrasPaginas"></a>
       <h2>Paginas Hechas por Nosotros</h2>
       <div class="paginas-hijo">
         <article class="links-pagina">
@@ -48,6 +66,7 @@
 
     <!--Miembros del Equipo-->
     <section class="miembros">
+      <a name="miembros"></a>
       <h2>Miembros del Equipo</h2>
       <div class="miembros-hijo">
         <!--Coordinador-->
@@ -85,6 +104,7 @@
 
     <!--Pie De Pagina-->
     <footer>
+      <a name="contacto"></a>
       <h3>Contacto</h3>
       <div class="redesSociales">
         <a href="https://mail.google.com/mail/u/2/?pli=1#inbox" target="_blank">
