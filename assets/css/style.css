@@ -176,8 +176,9 @@ label {
 /*Inicio de los Miembros del Equipo*/
 
 .miembros {
-    margin: 10%;
+    margin: auto;
     text-align: center;
+    width: fit-content;
 }
 
 .miembros h2 {
@@ -189,37 +190,20 @@ label {
 
 .miembros-hijo {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 
-    width: 100%;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    margin-bottom: 6rem;
     background-color: #37c294;
     margin-top: 10px;
     border-radius: 10px;
     border: solid 5px rgba(255, 255, 255, 0.548);
     box-shadow: 1px 2px 5px #288a69;
-}
-
-#coordinador {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-#subcoordinador {
-    grid-area: 1 / 2 / 2 / 3;
-}
-
-#primerIntegrante {
-    grid-area: 2 / 1 / 3 / 2;
-}
-
-#segundoIntegrante {
-    grid-area: 2 / 2 / 3 / 3;
-}
-
-.equipo {
-    margin: 5%;
 }
 
 .equipo img {
