@@ -6,21 +6,58 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #cfedfc;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 
 header{
     width: 100%;
-    position: fixed;
     top: 0;
     left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    height: 125px;
+    height: 130px;
     background: linear-gradient(to right, #631115, #bd0e0e,#979797, #006fab, #152938);
     z-index: 99999;
+}
+
+.logoCUK{
+    width: 125px;
+    height: 125px;
+    margin-top: 10px;
+}
+
+.btnGenerales{
+    height: 50px;
+}
+
+.generalHeader{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.containerbtm{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.botones{
+    margin-top: 20px;
+    background-color: #be383f;
+    width: 280px;
+    border-radius: 50px;
+    font-size: 40px;
+    text-align: center;
+    transition: 0.4s;
+    color: #fff;
+}
+
+.botones:hover{
+    cursor: pointer;
+    background-color: #2791e2;
 }
