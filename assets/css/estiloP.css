@@ -40,10 +40,20 @@ header{
     flex-direction: row;
 }
 
-.containerbtm{
+.general{
+    display: flex;
     height: 100%;
     width: 100%;
+    justify-content: center;
     align-items: center;
+}
+
+.containertbtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
 }
 
 .botones{
