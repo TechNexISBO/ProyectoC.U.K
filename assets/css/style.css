@@ -139,6 +139,7 @@ label {
 
 /*Fin de Sobre Nosotros*/
 
+/*inicio nuestras paginas*/
 .paginas {
     margin: 10%;
     text-align: center;
@@ -169,6 +170,11 @@ label {
     border: solid 2px black;
     width: 300px;
     height: 400px;
+}
+
+.paginas img{
+    width: 300px;
+    height: auto;
 }
 
 /*Fin de Nuestras Paginas*/
