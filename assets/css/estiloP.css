@@ -66,6 +66,66 @@ header{
     background-color: #2791e2;
 }
 
+/*formato para celular*/
+@media (max-width: 767px){
+
+    body {
+        overflow-x: hidden;
+    
+    }
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+        height: 130px;
+        background: linear-gradient(to right, #631115, #bd0e0e,#979797, #006fab, #152938);
+        z-index: 99999;
+    
+    }
+    
+    .acciones{
+        position: static;
+        display: block;
+        text-align: right;
+        margin-top: 5px;
+        margin-right: 30%;
+        transform: none;
+    }
+    .botones {
+    
+        background-color: #be383f;
+        width: 200px;
+        border-radius: 10px;
+        font-size: 20px;
+        text-align: center;
+        transition: 0.4s;
+        color: #fff;
+    
+    
+    }
+    .imgLaterales{
+        margin-top: 230px;
+        max-width: 200px;
+        height: auto;
+    }
+    .general{
+        flex-direction: column;
+        justify-content: left;
+    
+    }
+    #imgAdmin{
+        margin-top: 230px;
+    }
+    #imgAdmin2{
+        margin-top: 10px;
+    }
+    }
+
 
 /*formato para tablets*/
 
