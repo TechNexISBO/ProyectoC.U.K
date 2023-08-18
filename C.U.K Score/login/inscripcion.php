@@ -44,6 +44,3 @@ if (isset($_POST['registrar'])) {
     }
     
 }
-
-?>
-

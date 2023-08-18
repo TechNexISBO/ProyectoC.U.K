@@ -10,8 +10,8 @@
 
 <body>
     <?php
-    include("register.php")
-        ?>
+    include("inscripcion.php")
+    ?>
     <header></header>
     <div class="general">
         <fieldset class="campo">
@@ -25,15 +25,15 @@
                 <label>C.I<input type="number" placeholder="Ingrese la C.I" name="ci"></label>
                 <input type="submit" name="registrar" value="Registrar" class="btn">
                 <?php if ($error) { ?>
-                <h3>
-                    <?php echo $mensajeError; ?>
-                </h3>
-            <?php } ?>
-            <?php if (isset($mensajeExito)) { ?>
-                <h3>
-                    <?php echo $mensajeExito; ?>
-                </h3>
-            <?php } ?>
+                    <h3>
+                        <?php echo $mensajeError; ?>
+                    </h3>
+                <?php } ?>
+                <?php if (isset($mensajeExito)) { ?>
+                    <h3>
+                        <?php echo $mensajeExito; ?>
+                    </h3>
+                <?php } ?>
             </form>
         </fieldset>
     </div>
