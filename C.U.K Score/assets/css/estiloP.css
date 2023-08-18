@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 
-header{
+header {
     width: 100%;
     top: 0;
     left: 0;
@@ -24,21 +24,21 @@ header{
     align-items: center;
     padding: 0 5%;
     height: 130px;
-    background: linear-gradient(to right, #631115, #bd0e0e,#979797, #006fab, #152938);
+    background: linear-gradient(to right, #631115, #bd0e0e, #979797, #006fab, #152938);
     z-index: 99999;
 }
 
-.logoCUK{
+.logoCUK {
     width: 125px;
     height: 125px;
     margin-top: 10px;
 }
 
-.btnGenerales{
+.btnGenerales {
     height: 50px;
 }
 
-.general{
+.general {
     display: flex;
     height: 100%;
     width: 100%;
@@ -46,7 +46,7 @@ header{
     align-items: center;
 }
 
-.containertbtn{
+.containertbtn {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +54,7 @@ header{
     min-height: 60vh;
 }
 
-.botones{
+.botones {
     margin-top: 20px;
     background-color: #be383f;
     width: 280px;
@@ -65,19 +65,20 @@ header{
     color: #fff;
 }
 
-.botones:hover{
+.botones:hover {
     cursor: pointer;
     background-color: #2791e2;
 }
 
 /*formato para celular*/
-@media (max-width: 767px){
+@media (max-width: 767px) {
 
     body {
         overflow-x: hidden;
-    
+
     }
-    header{
+
+    header {
         position: fixed;
         width: 100%;
         top: 0;
@@ -87,12 +88,12 @@ header{
         align-items: center;
         padding: 0 5%;
         height: 130px;
-        background: linear-gradient(to right, #631115, #bd0e0e,#979797, #006fab, #152938);
+        background: linear-gradient(to right, #631115, #bd0e0e, #979797, #006fab, #152938);
         z-index: 99999;
-    
+
     }
-    
-    .acciones{
+
+    .acciones {
         position: static;
         display: block;
         text-align: right;
@@ -100,8 +101,9 @@ header{
         margin-right: 30%;
         transform: none;
     }
+
     .botones {
-    
+
         background-color: #be383f;
         width: 200px;
         border-radius: 10px;
@@ -109,33 +111,37 @@ header{
         text-align: center;
         transition: 0.4s;
         color: #fff;
-    
-    
+
+
     }
-    .imgLaterales{
+
+    .imgLaterales {
         margin-top: 230px;
         max-width: 200px;
         height: auto;
     }
-    .general{
+
+    .general {
         flex-direction: column;
         justify-content: left;
-    
+
     }
-    #imgAdmin{
+
+    #imgAdmin {
         margin-top: 230px;
     }
-    #imgAdmin2{
+
+    #imgAdmin2 {
         margin-top: 10px;
     }
-    }
+}
 
 
 /*formato para tablets*/
 
 @media (min-width: 768px) and (max-width: 1023px) {
     body {
-        overflow-x: hidden; 
+        overflow-x: hidden;
     }
 
     header {
@@ -151,13 +157,13 @@ header{
         background: linear-gradient(to right, #631115, #bd0e0e, #979797, #006fab, #152938);
         z-index: 99999;
     }
-    
+
     .logoCUK {
         width: 125px;
         height: 125px;
         margin-top: 10px;
     }
-    
+
     .btnGenerales {
         height: 50px;
     }
@@ -202,7 +208,6 @@ header{
 
     .general {
         margin-top: 130px;
-        overflow-x: hidden; 
+        overflow-x: hidden;
     }
 }
-
