@@ -26,9 +26,9 @@
     </header>
     <div class="centrar">
         <div class="body">
-            <div class="container">
+            <div class="contenedor-principal">
                 <form>
-                    <div class="head">
+                    <div class="formularios">
                         <span>Inicia Sesion</span>
                         <p>Inicia Sesion para ver lo nuevo de C.U.K Score</p>
                     </div>
@@ -38,7 +38,7 @@
                     </div>
                     <button>Iniciar Sesion</button>
                 </form>
-                <div class="form-footer">
+                <div class="footer-formularios">
                     <p>No tienes una cuenta? <a href="registro.php">Registrate</a></p>
                 </div>
             </div>

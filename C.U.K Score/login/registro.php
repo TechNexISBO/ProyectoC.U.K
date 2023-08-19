@@ -26,9 +26,9 @@
     </header>
     <div class="centrar">
         <div class="body">
-            <div class="container">
+            <div class="contenedor-principal">
                 <form>
-                    <div class="head">
+                    <div class="formularios">
                         <span>Registrarse</span>
                         <p>Forma parte de C.U.K Score</p>
                     </div>
@@ -40,7 +40,7 @@
                     </div>
                     <button>Registrarse</button>
                 </form>
-                <div class="form-footer">
+                <div class="footer-formularios">
                     <p>Tienes una cuenta? <a href="login.php">Inicia Sesion</a></p>
                 </div>
             </div>

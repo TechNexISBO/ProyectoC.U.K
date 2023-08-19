@@ -27,7 +27,7 @@ h2 {
     font-weight: bold;
 }
 
-.container {
+.contenedor-principal {
     max-width: 300px;
     background-color: #F1F7FE;
     border-radius: 15px;
@@ -43,19 +43,19 @@ form {
     text-align: center;
 }
 
-form .head {
+form .formularios {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-form .head span {
+form .formularios span {
     font-size: 1.6rem;
     font-weight: bolder;
     color: black;
 }
 
-form .head p {
+form .formularios p {
     font-size: 1.1rem;
     color: #7C6666;
 }
@@ -100,20 +100,20 @@ form button:hover {
     background-color: #005ce6;
 }
 
-.form-footer {
+.footer-formularios {
     background-color: #e0ecfb;
     padding: 16px;
     font-size: 1rem;
     text-align: center;
 }
 
-.form-footer a {
+.footer-formularios a {
     font-weight: bolder;
     color: #0066ff;
     transition: all 3s ease-in-out;
 }
 
-.form-footer a:hover {
+.footer-formularios a:hover {
     color: #005ce6;
 }
 
