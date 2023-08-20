@@ -98,7 +98,8 @@ h2 {
         align-items: center;
         padding: 0 5%;
         height: 130px;
-        background: linear-gradient(to right, #631115, #bd0e0e, #979797, #006fab, #152938);
+        background-color: #0356DD;
+        box-shadow: 1px 2px 15px #3165b8;
         z-index: 99999;
 
     }
@@ -114,7 +115,7 @@ h2 {
 
     .botones {
 
-        background-color: #be383f;
+        background-color: #4486f0;
         width: 200px;
         border-radius: 10px;
         font-size: 20px;
@@ -164,8 +165,9 @@ h2 {
         align-items: center;
         padding: 0 5%;
         height: 130px;
-        background: linear-gradient(to right, #631115, #bd0e0e, #979797, #006fab, #152938);
         z-index: 99999;
+        background-color: #0356DD;
+        box-shadow: 1px 2px 15px #3165b8;
     }
 
     .logoCUK {
@@ -194,7 +196,7 @@ h2 {
 
     .botones {
         margin-top: 20px;
-        background-color: #be383f;
+        background-color: #4486f0;
         width: 200px;
         border-radius: 50px;
         font-size: 40px;
