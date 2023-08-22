@@ -20,7 +20,7 @@
                 </h2>
             </div>
             <div class="volver">
-                <a href="../C.U.K_Score.html"><img src="../img/inicio.png" alt="inicio" width="50px"></a>
+                <a href="../index.html"><img src="../img/inicio.png" alt="inicio" width="50px"></a>
             </div>
         </div>
     </header>
