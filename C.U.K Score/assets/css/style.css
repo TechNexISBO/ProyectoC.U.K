@@ -200,3 +200,16 @@ form button:hover {
 }
 
 /* Fin del formulario login y registro */
+
+/* Inicio de las media query */
+
+@media (max-width: 1300px) {
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+}
+
+/* Fin de las media query */
