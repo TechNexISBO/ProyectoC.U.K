@@ -1,0 +1,102 @@
+/* Tratemos de hacer las Media Query donde el inicio y fin de algo asi hay un order */
+
+body {
+    background-color: #e8e8e8;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Inicio Header */
+
+header {
+    display: flex;
+    min-height: 70px;
+    background-color: #0356DD;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    margin-left: 20px;
+}
+
+.nombreCUK {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.links {
+    margin: 20px;
+    padding: 10px;
+}
+
+/* Fin Header */
+
+/* Inicio de contenedores grid y flex - 01 */
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 21px;
+    grid-row-gap: 0px;
+    margin: 100px;
+}
+
+#div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#div3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.hijo-contenedor img {
+    max-width: 250px;
+    margin: 100px;
+}
+
+.usuarios-padre {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.usuarios {
+    margin-top: 20px;
+    background-color: #4486f0;
+    color: white;
+    width: 280px;
+    border-radius: 40px;
+    font-size: 35px;
+    text-align: center;
+    transition: 0.4s;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    padding: 10px;
+}
+
+.usuarios:hover {
+    cursor: pointer;
+    background-color: black;
+    border-radius: 15px;
+}
+
+/* Fin de contenedores grid y flex - 01 */
