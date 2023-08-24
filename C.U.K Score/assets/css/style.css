@@ -1,0 +1,215 @@
+/* Tratemos de hacer las Media Query donde el inicio y fin de algo asi hay un order */
+
+body {
+    background-color: #e8e8e8;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Inicio Header */
+
+header {
+    display: flex;
+    min-height: 70px;
+    background-color: #0356DD;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    margin-left: 20px;
+}
+
+.nombreCUK {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.links {
+    margin: 20px;
+    padding: 10px;
+}
+
+/* Fin Header */
+
+/* Inicio de contenedores grid y flex - 01 */
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 21px;
+    grid-row-gap: 0px;
+    margin: 100px;
+}
+
+#div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#div3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.hijo-contenedor img {
+    max-height: 250px;
+    margin: 100px;
+}
+
+.usuarios-padre {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 100px;
+}
+
+.usuarios {
+    margin-top: 20px;
+    background-color: #4486f0;
+    color: white;
+    width: 280px;
+    border-radius: 40px;
+    font-size: 35px;
+    text-align: center;
+    transition: 0.4s;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    padding: 10px;
+}
+
+.usuarios:hover {
+    cursor: pointer;
+    background-color: black;
+    border-radius: 15px;
+}
+
+/* Fin de contenedores grid y flex - 01 */
+
+/* Inicio del formulario login y registro */
+
+.contenedor-principal {
+    max-width: 300px;
+    background-color: #F1F7FE;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 32px 24px 24px;
+    gap: 16px;
+    text-align: center;
+}
+
+form .formularios {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form .formularios span {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: black;
+}
+
+form .formularios p {
+    font-size: 1.1rem;
+    color: #7C6666;
+}
+
+form .inputs {
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+    margin: 1rem 0.5rem;
+    border-radius: 8px;
+    border-bottom: none;
+    outline: 0;
+}
+
+form .inputs input {
+    border: none;
+    outline: none;
+    padding: 8px 15px;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.299);
+    font-weight: 200;
+}
+
+form button {
+    background-color: #4287ef;
+    color: white;
+    width: 100%;
+    height: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 0;
+    overflow: hidden;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+form button:hover {
+    background-color: #005ce6;
+}
+
+.footer-formularios {
+    background-color: #e0ecfb;
+    padding: 16px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer-formularios a {
+    font-weight: bolder;
+    color: #0066ff;
+    transition: all 3s ease-in-out;
+}
+
+.footer-formularios a:hover {
+    color: #005ce6;
+}
+
+.centrar {
+    display: grid;
+    place-items: center;
+    height: 75vh;
+}
+
+/* Fin del formulario login y registro */
+
+/* Inicio de las media query */
+
+@media (max-width: 1300px) {
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+}
+
+/* Fin de las media query */
