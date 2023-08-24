@@ -287,6 +287,9 @@ label {
 
 .servicios h2 {
     color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+}
 
 .serviciosSpan{
     color: #2AD292;
@@ -324,7 +327,8 @@ label {
     background-color: #37c294;
     border-top: none;
 }
-/*Fin de Servicios*/
+
+/*Fin de Sobre Nosotros*/
 
 /*inicio nuestras paginas*/
 .paginas {
@@ -348,7 +352,6 @@ label {
     font-size: 50px;
     font-family: 'Open Sans', sans-serif;
 }
-  
 .paginasSpan{
     color: #37c294;
 }
@@ -399,6 +402,7 @@ label {
     grid-template-rows: 0.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+
     width: 100%;
     height: fit-content;
     padding: 1rem;
