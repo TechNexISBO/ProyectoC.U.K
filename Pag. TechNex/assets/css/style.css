@@ -74,35 +74,6 @@ label {
     display: none;
 }
 
-@media(max-width: 1500px) {
-    .menu {
-        padding: 30px;
-        margin: 0;
-    }
-
-    label {
-        display: initial;
-    }
-
-    .menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #169b75;
-        display: none;
-        border-top: solid 4px #111B23;
-    }
-
-    .link-header {
-        margin: 0 0 20px 0;
-        width: 100%;
-    }
-
-    #menu:checked~.menu {
-        display: initial;
-    }
-}
 
 /*Fin de la Barra de Navegacion*/
 
@@ -328,7 +299,7 @@ label {
     border-top: none;
 }
 
-/*Fin de Sobre Nosotros*/
+/*Fin Servicios*/
 
 /*inicio nuestras paginas*/
 .paginas {
@@ -457,3 +428,171 @@ footer h3 {
 }
 
 /*Fin del Pie De Pagina*/
+
+
+
+
+/*Inicio Diseño Celular*/
+ 
+@media (max-width: 768px){
+
+/*Inicio de la Barra de Navegacion*/
+
+@media(max-width: 1500px) {
+    .menu {
+        padding: 30px;
+        margin: 0;
+    }
+
+    label {
+        display: initial;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #169b75;
+        display: none;
+        border-top: solid 4px #111B23;
+    }
+
+    .link-header {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+
+    #menu:checked~.menu {
+        display: initial;
+    }
+}
+
+/*Inicio*/
+
+.pantalla-dividida{
+    margin-top: 33%;
+    display: flex;
+    width: 100%;
+}
+
+.pantalla-dividida h1{
+    font-size: 35px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.pantalla-dividida p{
+    font-size: 8px;
+    line-height: 30px;
+    width: 80%;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.tech{
+    color: #fff;
+}
+
+.izquierda{
+    background-color: #0cc788;
+    height: 60vh;
+    width: 50%;
+}
+
+.izquierda h1{
+    margin-top: 5%;
+}
+
+.botonCont{
+    margin-left: 10px;
+}
+
+.botonCont a{
+    border: 1px solid #fff;
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 30px;
+    transition: 0.5s;
+}
+
+.botonCont a:hover{
+    border: 4px solid #fff;
+    transform: scale(1.1);
+}
+
+.derecha{
+    width: 50%;
+    height: 50vh;
+}
+
+.derecha img{
+    width: 100%;
+    height: 60vh;
+}
+
+/*Inicio de los Miembros del Equipo*/
+
+.miembros {
+    margin-top: 300px;
+    text-align: center;
+    width: 100%;
+}
+
+.miembros h2 {
+    color: white;
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.miembros h3 {
+    font-size: 8px;
+}
+
+.miembros a {
+    font-size: 12px;
+}
+
+.miembrosSpan{
+    color: #37c294;
+}
+
+.miembros-hijo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    margin-bottom: 6rem;
+    background-color: #37c294;
+    margin-top: 10px;
+}
+
+.equipo img {
+    width: 60px;
+    filter: drop-shadow(1px 5px 10px rgb(0, 0, 0));
+    margin: 10px;
+}
+
+.equipo a {
+    text-decoration: underline;
+    color: firebrick;
+    font-weight: bold;
+}
+
+.equipo a:hover {
+    color: white;
+}
+
+/*Fin de los Miembros del Equipo*/
+}
