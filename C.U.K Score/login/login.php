@@ -14,12 +14,12 @@
 
     <header>
         <a href="#" class="logo">
-            <img src="../img/logoCUK.png" alt="logo C.U.K." /">
+            <img src="../img/logoCUK.png" alt="logo C.U.K.">
             <h2 class="nombreCUK">C.U.K. Score</h2>
         </a>
         <nav class="links">
             <a href="../index.html">
-                <img src="../img/inicio.png" alt="boton de inicio" / width="40em">
+                <img src="../img/inicio.png" alt="boton de inicio" width="40em">
             </a>
         </nav>
     </header>

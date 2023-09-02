@@ -1,9 +1,18 @@
-/* Tratemos de hacer las Media Query donde el inicio y fin de algo asi hay un order */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
 
 body {
     background-color: #e8e8e8;
     font-family: sans-serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -50,7 +59,7 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 21px;
+    grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin: 100px;
 }
@@ -106,8 +115,11 @@ header {
 .contenedor-principal {
     max-width: 300px;
     background-color: #F1F7FE;
-    border-radius: 15px;
+    border: 3px solid #4287ef;
+    border-radius: 20px;
     overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 50px;
 }
 
 form {
@@ -133,7 +145,7 @@ form .formularios span {
 
 form .formularios p {
     font-size: 1.1rem;
-    color: #7C6666;
+    color: black;
 }
 
 form .inputs {
@@ -154,6 +166,11 @@ form .inputs input {
     height: 40px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.299);
     font-weight: 200;
+}
+
+form .inputs ::placeholder {
+    color: black;
+    font-weight: 500;
 }
 
 form button {
@@ -202,14 +219,156 @@ form button:hover {
 /* Fin del formulario login y registro */
 
 /* Inicio de las media query */
+@media screen and (min-width: 1280px) {
 
-@media (max-width: 1300px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #e8e8e8;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
     .contenedor {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    .hijo-contenedor {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-flow: column;
     }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+
+    #div2 {
+        position: absolute;
+        margin-left: -12.6rem;
+    }
+
+    #div1 img,
+    #div3 img {
+        width: 100px;
+        height: 100px;
+        margin: 0px;
+    }
+
+    #div1 img {
+        width: 110px;
+        height: 110px;
+    }
+
+    #div1 {
+        position: absolute;
+        width: fit-content;
+        margin-top: -20.2rem;
+        margin-left: -20rem;
+    }
+
+    #div3 {
+        position: absolute;
+        width: fit-content;
+        margin-top: -21rem;
+        margin-left: -6rem;
+    }
+
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: -webkit-fill-available;
+        position: relative;
+        margin-top: 18rem;
+        margin-left: 17.8rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+    #div2 {
+        position: absolute;
+        margin-left: -12.6rem;
+    }
+
+    #div1 img,
+    #div3 img {
+        width: 100px;
+        height: 100px;
+        margin: 0px;
+    }
+
+    #div1 img {
+        width: 110px;
+        height: 110px;
+    }
+
+    #div1 {
+        position: absolute;
+        width: fit-content;
+        margin-top: -20.2rem;
+        margin-left: -20rem;
+    }
+
+    #div3 {
+        position: absolute;
+        width: fit-content;
+        margin-top: -21rem;
+        margin-left: -6rem;
+    }
+
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: -webkit-fill-available;
+        position: relative;
+        margin-top: 18rem;
+        margin-left: 17.8rem;
+    }
+
+    .usuarios-padre {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+    }
+
+    .hijo-contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        width: 100%;
+    }
+
+    .hijo-contenedor img {
+        width: 100px;
+        height: 100px;
+        margin: 0px;
+    }
+
 }
 
 /* Fin de las media query */
