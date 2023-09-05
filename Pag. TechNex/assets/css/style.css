@@ -74,36 +74,6 @@ label {
     display: none;
 }
 
-@media(max-width: 1500px) {
-    .menu {
-        padding: 30px;
-        margin: 0;
-    }
-
-    label {
-        display: initial;
-    }
-
-    .menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #169b75;
-        display: none;
-        border-top: solid 4px #111B23;
-    }
-
-    .link-header {
-        margin: 0 0 20px 0;
-        width: 100%;
-    }
-
-    #menu:checked~.menu {
-        display: initial;
-    }
-}
-
 /*Fin de la Barra de Navegacion*/
 
 /*Inicio*/
@@ -487,3 +457,156 @@ footer h3 {
 }
 
 /*Fin del Pie De Pagina*/
+
+
+
+/*diseño celular*/
+
+@media(max-width:768px) {
+
+    /* menu hambu*/
+    .menu {
+        padding: 30px;
+        margin: 0;
+    }
+
+    label {
+        display: initial;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #169b75;
+        display: none;
+        border-top: solid 4px #111B23;
+    }
+
+    .link-header {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+
+    #menu:checked~.menu {
+        display: initial;
+    }
+
+
+    /* inicio */
+    .pantalla-dividida {
+        margin-top: 15%;
+        display: flex;
+    }
+    
+    .pantalla-dividida h1 {
+        font-size: 80px;
+        width: 50%;
+        margin: auto;
+        margin-bottom: 40px;
+        margin-left: 50px;
+    }
+    
+    .pantalla-dividida p {
+        font-size: 25px;
+        margin-left: 50px;
+        width: 90%;
+        text-align: justify;
+    }
+    
+    .tech {
+        color: #fff;
+    }
+    
+    .izquierda {
+        background-color: #0cc788;
+        height: 70vh;
+        width: 100%;
+    }
+    
+    .izquierda h1 {
+        margin-top: 5%;
+    }
+    
+    .botonCont {
+        margin-left: 80px;
+    }
+    
+    .botonCont a {
+        border: 3.5px solid #fff;
+        padding: 20px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #111B23;
+        border-radius: 30px;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 30px;
+        transition: 0.5s;
+    }
+    
+    .botonCont a:hover {
+        border: 5px solid #fff;
+        transform: scale(1.1);
+    }
+    
+    .derecha {
+        width: 0%;
+        height: 0vh;
+    }
+    
+    .derecha img {
+        width: 0%;
+        height: 0vh;
+    }
+
+
+    /*miembros*/
+    .miembros {
+        margin-top: 300px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .miembros h2 {
+        color: white;
+        font-size: 50px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .miembros h3{
+        font-size: 30px;
+    }
+
+    .miembros h4{
+        font-size: 20px;
+    }
+    
+    .miembrosSpan {
+        color: #37c294;
+    }
+    
+    .miembros-hijo {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .equipo img {
+        width: 250px;
+        filter: drop-shadow(1px 5px 10px rgb(0, 0, 0));
+        margin: 10px;
+    }
+    
+    .equipo a {
+        font-size: 20px;
+        text-decoration: underline;
+        color: firebrick;
+        font-weight: bold;
+    }
+    
+    .equipo a:hover {
+        color: white;
+    }
+    
+  }
