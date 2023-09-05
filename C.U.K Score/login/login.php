@@ -30,24 +30,12 @@
 
     <section>
         <div class="centrar">
-            <div class="body">
-                <div class="contenedor-principal">
-                    <form>
-                        <div class="formularios">
-                            <span>Inicia Sesion</span>
-                            <p>Inicia Sesion para ver lo nuevo de C.U.K Score</p>
-                        </div>
-                        <div class="inputs">
-                            <input type="ci" placeholder="CI">
-                            <input type="password" placeholder="Contraseña">
-                        </div>
-                        <button>Iniciar Sesion</button>
-                    </form>
-                    <div class="footer-formularios">
-                        <p>No tienes una cuenta? <a href="registro.php">Registrate</a></p>
-                    </div>
-                </div>
-            </div>
+            <form action="validar.php" method="post">
+                <h1>Inicio de sesión</h1>
+                <input type="text" name="ci" placeholder="C.I." name="ci">
+                <input type="password" name="contraseña" placeholder="Contraseña" name="contraseña">
+                <input type="submit" value="Ingresar">
+            </form>
         </div>
     </section>
     <!-- Fin del formulario Login-->

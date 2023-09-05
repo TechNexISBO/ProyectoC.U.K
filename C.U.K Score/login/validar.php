@@ -1,21 +1,21 @@
 <?php
-$usuario = $_POST['usuario'];
+$ci = $_POST['ci'];
 $contraseña = $_POST['contraseña'];
 session_start();
-$_SESSION['usuario'] = $usuario;
+$_SESSION['ci'] = $ci;
 
-include('db.php');
+$conexion = mysqli_connect("localhost", "root", "", "login");
 
-$consulta = "SELECT*FROM usuario where usuario='$usuario' and contraseña='$contraseña'";
+$consulta = "SELECT*FROM usuario where ci='$ci' and contraseña='$contraseña'";
 $resultado = mysqli_query($conexion, $consulta);
 
 $filas = mysqli_num_rows($resultado);
 if ($filas) {
     header("location:homeCoach.php");
 } else {
-?>
+    ?>
     <?php
-    include("index.php");
+include "login.php";
     ?>
     <h1>ERROR EN LA AUTENTIFICACION</h1>
 <?php
