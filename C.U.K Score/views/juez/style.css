@@ -1,0 +1,108 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #e8e8e8;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    min-height: 70px;
+    background-color: #0356DD;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    color: white;
+    min-height: 75px;
+}
+
+.info {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.5em;
+    font-size: 20px;
+}
+
+header h2 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+
+.puntuacion {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+
+.numero p {
+    font-size: 3em;
+    margin: 1em;
+    border: none;
+    background-color: transparent;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+#div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#div3 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#div4 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+
+.botones-hijo1 img {
+    max-width: 5em;
+    transition: all 0.2s;
+}
+
+.botones-hijo1 img:hover,
+.botones-hijo2:hover {
+    filter: invert(27%) sepia(91%) saturate(6459%) hue-rotate(212deg) brightness(93%) contrast(102%);
+}
+
+.botones-hijo1,
+.botones-hijo2 {
+    margin: 3em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.botones-hijo2 {
+    border: 2px solid black;
+    border-radius: 15px;
+    transition: all 0.2s;
+}
+
+.botones-hijo2 p {
+    font-size: 20px;
+    font-weight: 600;
+}
