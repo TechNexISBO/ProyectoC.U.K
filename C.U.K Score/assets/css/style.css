@@ -40,7 +40,7 @@ header {
     margin-left: 20px;
 }
 
-.nombreCUK {
+.nombreCUK, #titulo-juez {
     font-size: 40px;
     font-weight: bold;
     color: white;
@@ -62,6 +62,13 @@ header {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin: 100px;
+}
+
+.contenedor-main-jueces {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #div1 {
@@ -243,11 +250,32 @@ form button:hover {
         flex-flow: column;
     }
 
+    .contenedor-main-jueces {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
     .hijo-contenedor {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-flow: column;
+    }
+
+    /*Clases/Id's del MQ del selector de jueces*/
+
+    .contenedor-jueces {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        margin: 35px;
+    }
+
+    #titulo-juez {
+        margin-right: 35vh;
     }
 
 }
@@ -294,6 +322,28 @@ form button:hover {
         margin-top: 18rem;
         margin-left: 17.8rem;
     }
+
+    /*Clases/Id's del MQ del selector de jueces*/
+
+    .contenedor-main-jueces {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        margin: 35px;
+    }
+
+    .contenedor-jueces {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+    }
+
+    #titulo-juez {
+        margin-right: 40vh;
+    }
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
@@ -367,6 +417,20 @@ form button:hover {
         width: 100px;
         height: 100px;
         margin: 0px;
+    }
+
+    /*Clases/Id's del MQ del selector de jueces*/
+
+    .contenedor-jueces {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        margin: 35px;
+    }
+
+    #titulo-juez {
+        display: none;
     }
 
 }
