@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Josefin+Sans&family=Noto+Serif&family=Oswald:wght@500&display=swap");
+    </style>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <title>Puntaje</title>
+  </head>
+  <body>
+    <header>
+      <div class="info">
+        <div class="categoria">Categ. 12-13 F</div>
+        <div class="nombreP">Nombre: Diego Romero</div>
+        <div class="kata">Kata: Suparinpei</div>
+      </div>
+
+      <h2 class="numeroJuez">Juez 1</h2>
+    </header>
+
+    <main>
+      <div class="puntuacion">
+        <div class="numero">
+          <p id="resultado">5.0</p>
+        </div>
+
+        <div class="botones">
+          <button onclick="sumar()" class="botones-hijo1" id="div1-Puntaje">
+            <img src="../../assets/img/signoSuma.svg" alt="simbolo de suma" />
+          </button>
+          <button onclick="restar()" class="botones-hijo1" id="div2-Puntaje">
+            <img src="../../assets/img/signoResta.svg" alt="simbolo de resta" />
+          </button>
+
+          <button onclick="enviar()" class="botones-hijo2" id="div3-Puntaje">
+            <p>Enviar</p>
+          </button>
+          <button onclick="reiniciar()" class="botones-hijo2" id="div4-Puntaje">
+            <p>Reiniciar</p>
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="../../assets/js/script.js"></script>
+  </body>
+</html>
