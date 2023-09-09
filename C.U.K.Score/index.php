@@ -37,11 +37,11 @@
       </div>
       <div class="hijo-contenedor" id="div2">
         <div class="usuarios-padre">
-          <a href="/views/administrador/loginAdministrador.html" class="usuarios">
+          <a href="views/administrador/loginAdministrador.html" class="usuarios">
             Administracion
           </a>
-          <a href="/views/juez/loginJuez.html" class="usuarios">Juez</a>
-          <a href="/views/coach/loginCoach.html" class="usuarios">Coach</a>
+          <a href="views/juez/loginJuez.html" class="usuarios">Juez</a>
+          <a href="views/coach/loginCoach.html" class="usuarios">Coach</a>
         </div>
       </div>
       <div class="hijo-contenedor" id="div3">

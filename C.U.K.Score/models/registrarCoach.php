@@ -1,6 +1,6 @@
 <?php
 
-include('../../config/db.php');
+include('C:\xampp\htdocs\ProyectoC.U.K\C.U.K.Score\config\db.php');
 
 if (isset($_POST['register'])) {
     if (
@@ -32,7 +32,7 @@ if (isset($_POST['register'])) {
             $consulta_coach = "INSERT INTO Coach (CI) VALUES ('$ci')";
             mysqli_query($conexion, $consulta_coach);
 
-            echo "Registro exitoso en todas las tablas.";
+            include('C:\xampp\htdocs\ProyectoC.U.K\C.U.K.Score\views\Coach\loginCoach.html');
         } else {
             echo "Error en la inserción en la tabla 'Persona': " . mysqli_error($conexion);
         }

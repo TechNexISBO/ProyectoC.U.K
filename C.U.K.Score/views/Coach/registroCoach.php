@@ -30,7 +30,7 @@
     <div class="centrar">
       <div class="body">
         <div class="contenedor-principal">
-          <form>
+          <form action="../../models/registrarCoach.php" method="post">
             <div class="formularios">
               <span>Registrarse</span>
               <p>Forma parte de C.U.K Score</p>
@@ -39,7 +39,7 @@
               <input type="text" oninput="validarNumero(this)" maxlength="8" name="CI" placeholder="CI" />
               <input type="text" name="Nombre" placeholder="Nombre" />
               <input type="text" name="Apellido" placeholder="Apellido" />
-              <input type="email" pattern="^[a-zA-Z0-9._%+-]+@gmail.com$" size="30" required name="Correo" placeholder="Email" />
+              <input type="email" pattern="^[a-zA-Z0-9._%+-]+@+^[a-zA-Z0-9._%+-]+.com$" size="30" required name="Correo" placeholder="Email" />
               <input type="date" name="Fnac" placeholder="0000/00/00" />
               <input type="password" name="contraseñaUser" placeholder="Contraseña" />
             </div>
@@ -47,7 +47,7 @@
           </form>
           <div class="footer-formularios">
             <p>
-              Tienes una cuenta? <a href="login-Coach.html">Inicia Sesion</a>
+              Tienes una cuenta? <a href="loginCoach.html">Inicia Sesion</a>
             </p>
           </div>
         </div>
@@ -57,7 +57,7 @@
   <!-- Fin del formulario Registro-->
 
   <?php
-  require_once('..\..\models\registrarCoach.php');
+  include('..\..\models\registrarCoach.php');
 
   ?>
 
