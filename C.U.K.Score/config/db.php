@@ -1,3 +1,3 @@
 <?php
-
-$conexion = mysqli_connect("localhost", "root", "", "cuk_score");
+	
+	$conexion = mysqli_connect("localhost", "root", "", "cuk_score");

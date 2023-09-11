@@ -13,7 +13,7 @@ if (isset($_POST['idCategoria']) && isset($_POST['Genero']) && isset($_POST['Equ
     die('Faltan datos en POST');
 }
 
-$sql = "UPDATE Categoria SET Genero='$Genero', Equipo='$Equipo', Edad='$Edad' WHERE idCategoria=$idCategoria";
+$sql = "UPDATE categoria SET Genero='$Genero', Equipo='$Equipo', Edad='$Edad' WHERE idCategoria=$idCategoria";
 $rta = mysqli_query($conexion, $sql);
 
 if (!$rta) {

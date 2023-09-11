@@ -1,7 +1,6 @@
 <?php
 
-$conexion = mysqli_connect("localhost", "root", "", "cuk_score");
-
+include('../../config/db.php');
 
 if (isset($_POST['register'])) {
     if (

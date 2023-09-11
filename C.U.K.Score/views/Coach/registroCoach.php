@@ -47,7 +47,7 @@
           </form>
           <div class="footer-formularios">
             <p>
-              Tienes una cuenta? <a href="login-Coach.html">Inicia Sesion</a>
+              Tienes una cuenta? <a href="loginCoach.html">Inicia Sesion</a>
             </p>
           </div>
         </div>

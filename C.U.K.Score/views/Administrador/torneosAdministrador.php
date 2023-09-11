@@ -1,6 +1,6 @@
 <?php
-include("../../config/db.php");
-?>
+	$conexion = mysqli_connect("localhost", "root", "", "cuk_score");
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +59,7 @@ include("../../config/db.php");
                         </tr>
                     </thead>
                     <?php
-                    $sqlTorneo = "SELECT * FROM Torneo";
+                    $sqlTorneo = "SELECT * FROM torneo";
                     $resultTorneo = mysqli_query($conexion, $sqlTorneo);
 
                     while ($mostrarTorneo = mysqli_fetch_array($resultTorneo)) {
@@ -101,7 +101,7 @@ include("../../config/db.php");
                         </tr>
                     </thead>
                     <?php
-                    $sqlCategoria = "SELECT * FROM Categoria";
+                    $sqlCategoria = "SELECT * FROM categoria";
                     $resultCategoria = mysqli_query($conexion, $sqlCategoria);
 
                     while ($mostrarCategoria = mysqli_fetch_array($resultCategoria)) {

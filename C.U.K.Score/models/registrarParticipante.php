@@ -1,6 +1,6 @@
 <?php
 
-$conexion = mysqli_connect('localhost', 'root', '', 'cuk_score');
+$conexion = mysqli_connect("localhost", "root", "", "cuk_score");
 
 
 if (isset($_POST['register'])) {
@@ -15,7 +15,7 @@ if (isset($_POST['register'])) {
         $Apellido = trim($_POST['Apellido']);
         $Fnac = trim($_POST['Fnac']);
 
-        $registrarParticipante = "INSERT INTO Persona (CI, Nombre, Apellido, Fnac) VALUES ('$CI', '$Nombre', '$Apellido', '$Fnac')";
+        $registrarParticipante = "INSERT INTO persona (CI, Nombre, Apellido, Fnac) VALUES ('$CI', '$Nombre', '$Apellido', '$Fnac')";
 
         if (mysqli_query($conexion, $registrarParticipante)) {
             echo "El Participante ha sido agregado exitosamente!";

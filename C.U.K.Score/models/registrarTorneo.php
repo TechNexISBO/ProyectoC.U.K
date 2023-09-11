@@ -14,7 +14,7 @@ if (isset($_POST['register'])) {
         $Fcreacion = trim($_POST['Fcreacion']);
         $Estado = trim($_POST['Estado']);
 
-        $crearTorneo = "INSERT INTO Torneo (nombreTorneo, Fcreacion, Estado) VALUES ('$nombreTorneo', '$Fcreacion', '$Estado')";
+        $crearTorneo = "INSERT INTO torneo (nombreTorneo, Fcreacion, Estado) VALUES ('$nombreTorneo', '$Fcreacion', '$Estado')";
 
         if (mysqli_query($conexion, $crearTorneo)) {
             echo "El torneo ha sido agregado exitosamente!";

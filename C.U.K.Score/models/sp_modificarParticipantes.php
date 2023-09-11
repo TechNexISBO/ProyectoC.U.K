@@ -1,6 +1,6 @@
 <?php
 var_dump($_POST);
-$conexion = mysqli_connect('localhost', 'root', '', 'cuk_score');
+$conexion = mysqli_connect("localhost", "root", "", "cuk_score");
 
 if (isset($_POST['CI']) && isset($_POST['Nombre']) && isset($_POST['Apellido']) && isset($_POST['Fnac'])) {
     $CI = $_POST['CI'];
@@ -11,7 +11,7 @@ if (isset($_POST['CI']) && isset($_POST['Nombre']) && isset($_POST['Apellido']) 
     die('Faltan datos en POST');
 }
 
-$sql = "UPDATE Persona SET CI='$CI', Nombre='$Nombre', Apellido='$Apellido', Fnac='$Fnac' WHERE CI=$CI";
+$sql = "UPDATE persona SET CI='$CI', Nombre='$Nombre', Apellido='$Apellido', Fnac='$Fnac' WHERE CI=$CI";
 $rta = mysqli_query($conexion, $sql);
 
 if (!$rta) {

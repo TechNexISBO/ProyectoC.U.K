@@ -1,6 +1,6 @@
 <?php
-$conexion = mysqli_connect('localhost', 'root', '', 'cuk_score');
-?>
+	$conexion = mysqli_connect("localhost", "root", "", "cuk_score");
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +55,6 @@ $conexion = mysqli_connect('localhost', 'root', '', 'cuk_score');
                             <th scope="col">Apellido</th>
                             <th scope="col">Fecha de Nacimiento</th>
                             <th scope="col">Modificar</th>
-                            <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
                     <?php
@@ -76,11 +75,6 @@ $conexion = mysqli_connect('localhost', 'root', '', 'cuk_score');
                                 Nombre=<?php echo $mostrar['Nombre'] ?> && 
                                 Apellido=<?php echo $mostrar['Apellido'] ?> &&
                                 Fnac=<?php echo $mostrar['Fnac'] ?>" class="modificar">Modificar</a></th>
-                                <th><a href="#?
-                                CI=<?php echo $mostrar['CI'] ?> && 
-                                Nombre=<?php echo $mostrar['Nombre'] ?> && 
-                                Apellido=<?php echo $mostrar['Apellido'] ?> &&
-                                Fnac=<?php echo $mostrar['Fnac'] ?>" class="eliminar">Eliminar</a></th>
                             </tr>
                             </tr>
                             

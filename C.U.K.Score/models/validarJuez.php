@@ -14,7 +14,7 @@ $filas = mysqli_num_rows($resultado);
 
 
 if ($filas) {
-    header("location: /views/juez/homeJuez.html");
+    header("location: ../views/juez/homeJuez.html");
 } else {
 ?>
     <?php
