@@ -71,6 +71,7 @@ class usuario_Model
 
         $registrarUser = $this->db->query("INSERT INTO usuario (tipoUser, contraseñaUser, CI)
         VALUES ('Coach', '$contraseñaUser', '$CI')");
+
     }
     
     public function get_validar($CI, $contraseñaUser)

@@ -4,9 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-    </style>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Nuevo</title>
@@ -17,15 +14,15 @@
     <header>
         <div class="miniHeader">
             <div class="logo">
-                <img src="assets/img/logoCUK.png" alt="Logo C.U.K.">
+                <img src="../../assets/img/logoCUK.png" alt="Logo C.U.K.">
                 <h2>C.U.K. Score</h2>
             </div>
             <nav class="links">
-                <a href="index.php">
-                    <img src="assets/img/atras.png" alt="Boton para ir atras">
+                <a href="../../index.php">
+                    <img src="../../assets/img/atras.png" alt="Boton para ir atras">
                 </a>
                 <a href="#">
-                    <img src="assets/img/ayuda.png" alt="Boton de ayuda">
+                    <img src="../../assets/img/ayuda.png" alt="Boton de ayuda">
                 </a>
             </nav>
         </div>
