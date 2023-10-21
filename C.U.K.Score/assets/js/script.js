@@ -1,22 +1,35 @@
-var suma = 5.0;
-function sumar() {
-  if (suma < 9.9) {
-    suma += 0.1;
-    document.getElementById("resultado").innerHTML = suma.toFixed(1);
-  }
-}
-function restar() {
-  if (suma > 5.0) {
-    suma -= 0.1;
-    document.getElementById("resultado").innerHTML = suma.toFixed(1);
-  }
-}
-function reiniciar() {
-  suma = 5.0;
-  document.getElementById("resultado").innerHTML = suma.toFixed(1);
-}
 
-function enviar() {
-    var resultado = document.getElementById("resultado").value;
-    
-}
+/* MENU HAMBURGUESA */ 
+const iconoMenu = document.querySelector('#icono-menu');
+const menu = document.querySelector('#menu');
+
+/* FORMULARIO */
+const loginForm = document.getElementById('loginForm');
+const registroForm = document.getElementById('registroForm');
+const iniciarSesionBtn = document.getElementById('iniciarSesionBtn');
+const registrarseBtn = document.getElementById('registrarseBtn');
+
+
+// MENU HAMBURGUESA
+iconoMenu.addEventListener('click', (e) => {
+    // Alternamos estilos para el menú y body
+    menu.classList.toggle('active');
+    document.body.classList.toggle('opacity');
+    iconoMenu.classList.toggle('invertido');
+});
+
+// FORMULARIOS
+iniciarSesionBtn.addEventListener('click', () => {
+    loginForm.classList.remove('hidden');
+    registroForm.classList.add('hidden');
+});
+
+registrarseBtn.addEventListener('click', () => {
+    registroForm.classList.remove('hidden');
+    loginForm.classList.add('hidden');
+});
+
+
+
+
+
