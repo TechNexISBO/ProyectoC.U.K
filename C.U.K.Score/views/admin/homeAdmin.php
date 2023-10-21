@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- INICO BOOTSTRAP -->
-    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- FIN BOOTSTRAP -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Administracion</title>
 </head>
 
 <body>
     <header>
         <div class="icono-menu">
-            <img src="../../assets/img/flechaDoble.svg" alt="flechas" id="icono-menu">
+            <img src="assets/img/flechaDoble.svg" alt="flechas" id="icono-menu">
         </div>
 
         <div class="cont-menu active" id="menu">
             <div class="logo">
-                <img src="../../assets/img/avatar.svg" alt="logo">
+                <img src="assets/img/avatar.svg" alt="logo">
                 <h3>Administracion</h3>
             </div>
 
@@ -31,7 +31,7 @@
             </ul>
 
             <a href="index.php" class="volver">
-                <img src="../../assets/img/power.svg" alt="voler">
+                <img src="assets/img/power.svg" alt="voler">
             </a>
         </div>
     </header>
@@ -46,7 +46,7 @@
                     <a href="#" class="btn btn-primary">AGREGAR</a>
                 </div>
                 <div class="busqueda">
-                    <form action="" method="get">
+                    <form action="#" method="get">
                         <input type="text" name="busqueda" class="search">
                         <input type="submit" name="enviar" value="Buscar">
                     </form>
@@ -216,8 +216,8 @@
     <script src="../../assets/js/bootstrap.min.js"></script>
     <!-- FIN BOOTSTRAP -->
 
-    <script src="../../assets/js/script.js"></script>
-    <script src="../../assets/js/tablas.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/tablas.js"></script>
 </body>
 
 </html>
