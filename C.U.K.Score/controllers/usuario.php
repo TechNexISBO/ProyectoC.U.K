@@ -1,6 +1,4 @@
 <?php
-        session_start();
-
 class usuarioController {
 
     public function __construct()
@@ -23,7 +21,7 @@ class usuarioController {
         $Apellido = $_POST['Apellido'];
         $Correo = $_POST['Correo'];
         $Fnac = $_POST['Fnac'];
-        $contraseñaUser = $_POST['contraseñaUser'];
+        $contraseñaUser = md5($_POST['contraseñaUser']);
 
         // LLAMA A LA FUNCION DE usuarioModel.php
         $user = new usuario_Model();
@@ -36,7 +34,7 @@ class usuarioController {
     // VALIDA EL INICIO DE SESION DE LAS CUENTAS ADMIN Y COACH
     public function validar()
     {
-
+        session_start();
         $CI = $_POST['CI'];
         $contraseñaUser = $_POST['contraseñaUser'];
 
@@ -46,7 +44,7 @@ class usuarioController {
         if ($usuario) {
             switch ($usuario['tipoUser']) {
                 case 'Administrador':
-                    header("Location: views/administrador/homeAdmin.html");
+                    header("Location: index.php?c=tablas&a=tablas");
                     break;
                 case 'Coach':
                     header("Location: views/coach/homeCoach.html");
@@ -57,7 +55,7 @@ class usuarioController {
                 break;
             }
         } else {
-            require_once("../index.php");
+            require_once("../index.php");   
             echo '<h1 class="error">ERROR EN LA AUTENTICACIÓN</h1>';
         }
     }
