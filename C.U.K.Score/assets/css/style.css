@@ -154,9 +154,12 @@ body {
     margin: 2em;
 }
 
+.nombreTabla h3 {
+    font-size: 50px;
+}
+
 
 /* INICIO FORMULARIOS -- MAIN */
-
 .formulario {
     display: flex;
     align-items: start;
@@ -230,6 +233,10 @@ body {
     display: none;
 }
   
+/* INGRESAR PARTICIPANTES */
+
+
+
 
 /* MEDIA QUERYS */
 
