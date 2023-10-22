@@ -30,6 +30,24 @@ class tablasController {
 
     }
 
+    public function tablasCoach(){
+
+        $user = new tablas_Model();
+
+
+        //TABLA TORNEO
+        $torneoData = $user->get_torneo();
+    
+        //TABLA CATEGORIA
+        $categoriaData = $user->get_categoria();
+    
+        //TABLA PARTICIPANTE
+        $partcicipanteData = $user->get_participante();
+    
+        require_once "views/coach/homeCoach.php";
+
+    }
+
     public function agregar(){
         require_once "views/administrador/nuevoTorneo.php";
     }

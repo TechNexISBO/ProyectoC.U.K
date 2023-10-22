@@ -47,7 +47,7 @@ class usuarioController {
                     header("Location: index.php?c=tablas&a=tablas");
                     break;
                 case 'Coach':
-                    header("Location: views/coach/homeCoach.html");
+                    header("Location: index.php?c=tablas&a=tablasCoach");
                     break;
                 default:
                 require_once("../index.php");
