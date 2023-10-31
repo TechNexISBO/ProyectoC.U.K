@@ -6,55 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <title>TechNex</title>
+    <title>Contáctanos!</title>
 </head>
 
 <body>
 
     <header>
-        <div class="nombre-logo">
-            <img src="img/logosinfondo.png" alt="logoDeLaEmpresa" class="logo" width="125" />
-            <h2>TechNex</h2>
-        </div>
 
-        <input type=" checkbox" id="menu" />
-        <label for="menu">
-            <img src="img/menu.png" alt="iconoDelMenu" class="menuIcono" />
-        </label>
-
-        <ul class="menu">
-            <li class="link-header">
-                <a href="index.html" class="item"><img src="img/inicio.png" alt="inicio" class="inicioIcono"></a>
-            </li>
-        </ul>
-    </header>
+        <img src="img/logosinfondo.png" class="logo" alt="logo">
+    
+        <input type="checkbox" id="menu">
+    
+        <a href="index.html">
+          <img src="img/inicio.png" class="menu-icono" alt="menu">
+        </a>
+    
+      </header>
 
     <div class="centro">
         <div class="Bordes">
             <div class="Cuerpo">
-                <form class="formulario" action="correo.php" method="post">
-                    <p id="titulo">Solicitud</p>
+                <form class="formulario" action="https://formsubmit.co/enviostechnex@gmail.com" method="post">
+                    <p id="titulo">Contáctanos!</p>
                     <div class="campos">
-                        <input type="text" class="campo" placeholder="Nombre" autocomplete="off" name="nombre" required>
+                        <input type="text" class="campo" placeholder="Nombre" autocomplete="off" name="Nombre" required>
                     </div>
                     <div class="campos">
-                        <input type="text" class="campo" placeholder="Apellido" name="apellido" required>
-                    </div>
-
-                    <div class="campos">
-                        <input type="email" class="campo" placeholder="Correo Electronico" name="correo" required>
+                        <input type="text" class="campo" placeholder="Apellido" name="Apellido" required>
                     </div>
 
                     <div class="campos">
-                        <textarea name="categoria" class="campo" cols="70" rows="13"
-                            placeholder="De que trata tu sitio web" required></textarea>
+                        <input type="email" class="campo" placeholder="Correo Electronico" name="Correo" required>
+                        <input type="hidden" name="_template" value="box">
                     </div>
 
                     <div class="campos">
-                        <textarea name="expectativas" class="campo" cols="70" rows="13"
-                            placeholder="Que esperas del sitio web" required></textarea>
+                        <textarea name="Categoria" class="campo" cols="70" rows="5"
+                            placeholder="Asunto" required></textarea>
                     </div>
-                    <input type="submit" value="enviar" class="boton">
+
+                    <div class="campos">
+                        <textarea name="Expectativas" class="campo" cols="70" rows="13"
+                            placeholder="Mensaje" required></textarea>
+                    </div>
+                    <input type="submit" value="Enviar" class="boton">
                 </form>
 
             </div>

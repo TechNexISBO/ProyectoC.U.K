@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- INICO BOOTSTRAP -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- FIN BOOTSTRAP -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>C.U.K.Score</title>
+</head>
+
+<body>
+    <header>
+        <div class="icono-menu">
+            <img src="assets/img/flechaDoble.svg" alt="flechas" id="icono-menu">
+        </div>
+
+        <div class="cont-menu active" id="menu">
+            <div class="logo">
+                <img src="assets/img/logoCUK.png" alt="logo">
+                <h3>C.U.K.Score</h3>
+            </div>
+
+            <ul>
+                <li><a href="#" id="iniciarSesionBtn">Iniciar Sesión</a></li>
+                <li><a href="#" id="registrarseBtn">Registrarse</a></li>
+                <li><a href="#">Jueces</a></li>
+                <li><a href="#">Vista</a></li>
+            </ul>
+
+            <a href="http://cuk.org.uy/" class="volver">
+                <img src="assets/img/power.svg" alt="voler">
+            </a>
+        </div>
+    </header>
+
+    <main class="home">
+        <!-- LOGIN -->
+
+        <section class="formulario visible" id="loginForm">
+            <section class="miniFormulario">
+                <div class="nombreForm">
+                    <h2>Inicia Sesión</h2>
+                    <p><span class="nombreApp">C.U.K.Score</span> nunca te pediria tu contraseña</p>
+                </div>
+                <form action="index.php?c=usuario&a=validar" method="post" class="form">
+
+                    <!-- CI -->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="CI" name="CI" placeholder="CI"
+                            oninput="validarNumero(this)" maxlength="8" minlength="8">
+                        <label for="floatingInput">CI</label>
+                    </div>
+
+                    <!-- Contraseña-->
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="contraseñaUser" name="contraseñaUser"
+                            placeholder="Password">
+                        <label for="floatingPassword">Contraseña</label>
+                    </div>
+
+                    <div class="formFooterLogin">
+                        <input type="submit" value="Ingresar" class="button">
+                    </div>
+                </form>
+
+            </section>
+        </section>
+
+
+        <!-- REGISTRO -->
+        <section class="formulario hidden" id="registroForm">
+            <section class="miniFormulario">
+
+                <div class="nombreForm">
+                    <h2>Registrate</h2>
+                    <p>Unute a <span class="nombreApp">C.U.K.Score</span> para tener funciones unicas</p>
+                </div>
+
+                <form action="index.php?c=usuario&a=guarda" method="post" class="form">
+
+                    <!-- CI -->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="CI" name="CI" placeholder="CI"
+                            oninput="validarNumero(this)" maxlength="8" minlength="8">
+                        <label for="floatingInput">CI</label>
+                    </div>
+
+                    <!-- Nombre -->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre">
+                        <label for="floatingInput">Nombre</label>
+                    </div>
+
+                    <!-- Apellido -->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido">
+                        <label for="floatingInput">Apellido</label>
+                    </div>
+
+                    <!-- Fecha de Nacimiento-->
+                    <div class="form-floating mb-3">
+                        <input type="date" class="form-control" id="Fnac" name="Fnac" placeholder="DD-MM-YYYY">
+                        <label for="floatingInput">Fnac</label>
+                    </div>
+
+                    <!-- Correo -->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="Correo" pattern="^[a-zA-Z0-9._%+-]+@gmail.com$" name="Correo" placeholder="Email">
+                        <label for="floatingInput">Email</label>
+                    </div>
+
+                    <!-- Contraseña-->
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="contraseñaUser" name="contraseñaUser"
+                            placeholder="Password">
+                        <label for="floatingPassword">Contraseña</label>
+                    </div>
+
+                    <div class="formFooter">
+                        <input type="submit" value="Ingresar" class="button">
+                    </div>
+                </form>
+
+            </section>
+        </section>
+        
+    </main>
+       <!-- INICO BOOTSTRAP -->
+       <script src="assets/js/bootstrap.min.js"></script>
+       <!-- FIN BOOTSTRAP -->
+   
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
