@@ -28,7 +28,6 @@ body {
 .icono-menu {
     margin: 40px 50px;
     position: relative;
-    z-index: 10;
     z-index: 10000;
 }
 
@@ -140,24 +139,32 @@ body {
 /* Estilos para el diseño de las tablas */
 .formatoTablas {
     width: 80%;
+  
+}
+
+.table-responsive  {
     overflow: auto;
+    max-height: 400px;
 }
 
 .formato{
     padding: 2.5em;
 }
 
-.busqueda {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    margin: 2em;
+.nombreTabla {
+    margin-bottom: 2em;
 }
 
 .nombreTabla h3 {
     font-size: 50px;
 }
 
+
+.opciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 /* INICIO FORMULARIOS -- MAIN */
 .formulario {

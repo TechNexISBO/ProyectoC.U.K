@@ -4,7 +4,7 @@
 		
 		public static function conexion(){
 			
-			$conexion = new mysqli("127.0.0.1", "root", "", "cuk_score");
+			$conexion = new mysqli("127.0.0.1", "root", "", "cukscore");
 			return $conexion;
 			
 		}

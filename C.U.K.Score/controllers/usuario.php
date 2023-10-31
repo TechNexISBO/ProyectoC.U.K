@@ -21,7 +21,7 @@ class usuarioController {
         $Apellido = $_POST['Apellido'];
         $Correo = $_POST['Correo'];
         $Fnac = $_POST['Fnac'];
-        $contraseñaUser = md5($_POST['contraseñaUser']);
+        $contraseñaUser = $_POST['contraseñaUser'];
 
         // LLAMA A LA FUNCION DE usuarioModel.php
         $user = new usuario_Model();
@@ -47,15 +47,16 @@ class usuarioController {
                     header("Location: index.php?c=tablas&a=tablas");
                     break;
                 case 'Coach':
+                    $_SESSION['CI_C'] = $CI;
                     header("Location: index.php?c=tablas&a=tablasCoach");
                     break;
                 default:
-                require_once("../index.php");
+                require_once("index.php");
                 echo '<h1 class="error">TIPO DE USUARIO DESCONOCIDO</h1>';
                 break;
             }
         } else {
-            require_once("../index.php");   
+            require_once("index.php");   
             echo '<h1 class="error">ERROR EN LA AUTENTICACIÓN</h1>';
         }
     }
