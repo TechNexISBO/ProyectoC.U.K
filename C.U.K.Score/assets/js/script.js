@@ -1,4 +1,3 @@
-
 /* MENU HAMBURGUESA */ 
 const iconoMenu = document.querySelector('#icono-menu');
 const menu = document.querySelector('#menu');
@@ -8,7 +7,6 @@ const loginForm = document.getElementById('loginForm');
 const registroForm = document.getElementById('registroForm');
 const iniciarSesionBtn = document.getElementById('iniciarSesionBtn');
 const registrarseBtn = document.getElementById('registrarseBtn');
-
 
 // MENU HAMBURGUESA
 iconoMenu.addEventListener('click', (e) => {
@@ -28,6 +26,8 @@ registrarseBtn.addEventListener('click', () => {
     registroForm.classList.remove('hidden');
     loginForm.classList.add('hidden');
 });
+
+
 
 
 

@@ -1,5 +1,16 @@
+<?php
+session_start();
+
+if (isset($_SESSION['CI_C'])) {
+    $CI_C = $_SESSION['CI_C'];
+} else {
+    header("Location: index.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -48,12 +59,11 @@
                     <p><span class="nombreApp">C.U.K.Score</span> espera con ansias a su alumno</p>
                 </div>
 
-                <form action="index.php?c=usuario&a=guarda" method="post" class="form" autocomplete="off">
+                <form action="index.php?c=tablas&a=guardarParticipante" method="post" class="form">
 
                     <!-- CI -->
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="CI" name="CI" placeholder="CI"
-                            oninput="validarNumero(this)" maxlength="8" minlength="8">
+                        <input type="text" class="form-control" id="CI" name="CI" placeholder="CI" oninput="validarNumero(this)" maxlength="8" minlength="8">
                         <label for="floatingInput">CI</label>
                     </div>
 
@@ -87,13 +97,14 @@
                         <label for="floatingInput">Pais</label>
                     </div>
 
-                    <!-- Categoria -->
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Seleccione una Categoria</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
+                    <!-- Genero -->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="GeneroP" name="GeneroP" placeholder="Genero">
+                        <label for="floatingInput">Genero</label>
+                    </div>
+
+                    <!-- CI_C -->
+                    <input type="hidden" id="CI_C" name="CI_C" value="<?php echo isset($_SESSION['CI_C']) ? $_SESSION['CI_C'] : ''; ?>">
 
                     <div class="formFooter">
                         <input type="submit" value="Ingresar" class="button">
@@ -108,12 +119,6 @@
                 <div class="nombreTabla">
                     <h3>Participantes</h3>
                 </div>
-                <div class="busqueda">
-                    <form action="" method="get">
-                        <input type="text" name="busqueda" class="search">
-                        <input type="submit" name="enviar" value="Buscar">
-                    </form>
-                </div>
                 <div class="table-responsive">
                     <table class="table">
                         <thead class="table-dark align-middle">
@@ -124,6 +129,8 @@
                                 <th>Fnac</th>
                                 <th>Escuela</th>
                                 <th>Pais</th>
+                                <th>Genero</th>
+                                <th>CI Coach</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -136,6 +143,8 @@
                                 echo "<td>{$partcicipante['Fnac']}</td>";
                                 echo "<td>{$partcicipante['Escuela']}</td>";
                                 echo "<td>{$partcicipante['Pais']}</td>";
+                                echo "<td>{$partcicipante['GeneroP']}</td>";
+                                echo "<td>{$partcicipante['CI_C']}</td>";
                                 echo "</tr>";
                             }
                             ?>
@@ -145,17 +154,11 @@
             </section>
         </section>
 
-         <!-- TABLA CATEGORIAS -->
-         <section class="formatoTablas hidden" id="inicioCategorias">
+        <!-- TABLA CATEGORIAS -->
+        <section class="formatoTablas hidden" id="inicioCategorias">
             <section class="formato">
                 <div class="nombreTabla">
                     <h3>Categoria</h3>
-                </div>
-                <div class="busqueda">
-                    <form action="" method="get">
-                        <input type="text" name="busqueda" class="search">
-                        <input type="submit" name="enviar" value="Buscar">
-                    </form>
                 </div>
                 <div class="table-responsive">
                     <table class="table">
@@ -172,7 +175,7 @@
                             foreach ($categoriaData as $categoria) {
                                 echo "<tr>";
                                 echo "<td>{$categoria['idCategoria']}</td>";
-                                echo "<td>{$categoria['Genero']}</td>";
+                                echo "<td>{$categoria['GeneroC']}</td>";
                                 echo "<td>{$categoria['Equipo']}</td>";
                                 echo "<td>{$categoria['Edad']}</td>";
                                 echo "</tr>";
@@ -184,17 +187,11 @@
             </section>
         </section>
 
-         <!-- TABLA TORNEO -->
+        <!-- TABLA TORNEO -->
         <section class="formatoTablas hidden" id="inicioTorneo">
             <section class="formato">
                 <div class="nombreTabla">
                     <h3>Torneo</h3>
-                </div>
-                <div class="busqueda">
-                    <form action="#" method="get">
-                        <input type="text" name="busqueda" class="search">
-                        <input type="submit" name="enviar" value="Buscar">
-                    </form>
                 </div>
                 <div class="table-responsive">
                     <table class="table">
@@ -204,6 +201,8 @@
                                 <th>Nombre</th>
                                 <th>Fcracion</th>
                                 <th>Estado</th>
+                                <th>Ver</th>
+                                <th>Registrar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -212,8 +211,10 @@
                                 echo "<tr>";
                                 echo "<td>{$torneo['idTorneo']}</td>";
                                 echo "<td>{$torneo['nombreTorneo']}</td>";
-                                echo "<td>{$torneo['Fcreacion']}</td>";
+                                echo "<td>{$torneo['Fecha']}</td>";
                                 echo "<td>{$torneo['Estado']}</td>";
+                                echo "<td>Ver</td>";
+                                echo "<td><a href='index.php?c=tablas&a=registrar&id=" . $torneo["idTorneo"] . "' class='btn btn-success'>Registrar</a></td>";
                                 echo "</tr>";
                             }
                             ?>
