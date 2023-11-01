@@ -53,12 +53,31 @@
                     <!-- CI -->
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="CI_P" name="CI_P" placeholder="CI" oninput="validarNumero(this)" maxlength="8" minlength="8">
+                    <p><span class="nombreApp">REGISTRA</span> a un participante al torneo, <span
+                            class="nombreApp">C.U.K.Score</span><br> lo espera</p>
+                </div>
+
+                <form action="index.php?c=tablas&a=guardaParticipa" method="post" class="form">
+
+                    <!-- ID TORNEO-->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="idTorneo" name="idTorneo" placeholder="idTorneo"
+                            value="<?php echo $torneoData["Torneo"]["idTorneo"] ?>" readonly>
+                        <label for="floatingInput">idTorneo</label>
+                    </div>
+
+                    <!-- CI -->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="CI_P" name="CI_P" placeholder="CI"
+                            oninput="validarNumero(this)" maxlength="8" minlength="8">
                         <label for="floatingInput">CI</label>
                     </div>
 
                     <!-- CATEGORIA -->
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="idCategoria" name="idCategoria" placeholder="CATEGORIA">
+                        <input type="text" class="form-control" id="idCategoria" name="idCategoria"
+                            placeholder="CATEGORIA" oninput="validarNumero(this)" maxlength="2" minlength="1">
                         <label for="floatingInput">CATEGORIA</label>
                     </div>
 
@@ -86,6 +105,8 @@
                                 <th>Fnac</th>
                                 <th>Escuela</th>
                                 <th>Pais</th>
+                                <th>Genero</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -98,6 +119,7 @@
                                 echo "<td>{$partcicipante['Fnac']}</td>";
                                 echo "<td>{$partcicipante['Escuela']}</td>";
                                 echo "<td>{$partcicipante['Pais']}</td>";
+                                echo "<td>{$partcicipante['GeneroP']}</td>";
                                 echo "</tr>";
                             }
                             ?>

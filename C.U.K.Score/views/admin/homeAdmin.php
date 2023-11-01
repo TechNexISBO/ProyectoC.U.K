@@ -67,6 +67,7 @@
                                 echo "<td>{$torneo['Fecha']}</td>";
                                 echo "<td>{$torneo['Estado']}</td>";
                                 echo "<td><a href='index.php?c=tablas&a=registrar&id=" . $torneo["idTorneo"] . "' class='btn btn-warning'>Modificar</a></td>";
+                                echo "<td><a href='index.php?c=tablas&a=modificar&id=" . $torneo["idTorneo"] . "' class='btn btn-warning'>Modificar</a></td>";
                                 echo "<td>Ingresar</td>";
                                 echo "</tr>";
                             }

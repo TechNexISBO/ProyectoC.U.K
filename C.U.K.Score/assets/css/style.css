@@ -139,15 +139,15 @@ body {
 /* Estilos para el diseño de las tablas */
 .formatoTablas {
     width: 80%;
-
 }
 
-.table-responsive {
+.table-responsive  {
+
     overflow: auto;
     max-height: 400px;
 }
 
-.formato {
+.formato{
     padding: 2.5em;
 }
 
@@ -178,7 +178,7 @@ body {
     min-height: 30em;
 }
 
-.form {
+.form { 
     margin-top: 5em;
 }
 
@@ -376,6 +376,6 @@ body {
     /* FORMULARIO*/
 
     .formulario {
+
         margin-top: 5em;
     }
-}

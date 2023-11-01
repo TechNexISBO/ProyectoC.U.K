@@ -165,6 +165,15 @@ class tablas_Model {
 
     }
 
+    public function get_participas($idTorneo){
+        $sqlTorneo = "SELECT * FROM torneo WHERE idTorneo='$idTorneo' LIMIT 1";
+        $resultadoTorneo = $this->db->query($sqlTorneo);
+        $row = $resultadoTorneo->fetch_assoc();
+
+        return $row;
+    }
+
+
     public function agregarParticipa($CI_P, $idTorneo, $idCategoria){
         
         $resultadoParticipa = $this->db->query("INSERT INTO participa (CI_P, idTorneo, idCategoria) 
