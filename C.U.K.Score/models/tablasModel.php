@@ -173,6 +173,7 @@ class tablas_Model {
         return $row;
     }
 
+
     public function agregarParticipa($CI_P, $idTorneo, $idCategoria){
         
         $resultadoParticipa = $this->db->query("INSERT INTO participa (CI_P, idTorneo, idCategoria) 

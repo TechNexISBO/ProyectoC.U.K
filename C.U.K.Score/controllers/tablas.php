@@ -1,8 +1,10 @@
 <?php
 
 
+
 class tablasController
 {
+
 
     public function __construct()
     {
@@ -11,6 +13,30 @@ class tablasController
 
     public function tablas()
     {
+    $user = new tablas_Model();
+
+
+    //TABLA TORNEO
+    $torneoData = $user->get_torneo();
+
+    //TABLA CATEGORIA
+    $categoriaData = $user->get_categoria();
+
+    //TABLA PARTICIPANTE
+    $partcicipanteData = $user->get_participante();
+
+    //TABLA COACH
+    $coachData = $user->get_coach();
+
+    //TABALA KATA
+    $kataDato = $user->get_kata();
+
+    
+    require_once "views/admin/homeAdmin.php";
+
+    }
+
+    public function tablasCoach(){
         $user = new tablas_Model();
 
 
@@ -42,7 +68,7 @@ class tablasController
 
         //TABLA TORNEO
         $torneoData = $user->get_torneo();
-
+   
         //TABLA CATEGORIA
         $categoriaData = $user->get_categoria();
 
@@ -56,6 +82,9 @@ class tablasController
 
     }
 
+  
+
+        
     public function registrar($idTorneo)
     {
 
@@ -79,8 +108,10 @@ class tablasController
 
 
     // TORNEO
-    public function guarda()
+ 
+     public function guarda()
     {
+
 
         $nombreTorneo = $_POST['nombreTorneo'];
         $Fecha = $_POST['Fecha'];
@@ -90,6 +121,8 @@ class tablasController
         $this->tablas();
     }
 
+
+
     public function modificar($idTorneo)
     {
         $user = new tablas_Model();
@@ -98,8 +131,10 @@ class tablasController
         $torneoData["Torneo"] = $user->get_torneos($idTorneo);
 
         require_once "views/admin/modificarTorneo.php";
-
+    
     }
+
+   
 
     public function actualizar()
     {
@@ -113,7 +148,6 @@ class tablasController
         $this->tablas();
     }
 
-    //Participante 
     public function guardarParticipante()
     {
 
@@ -127,6 +161,12 @@ class tablasController
         $CI_C = $_POST['CI_C'];
 
         $user = new tablas_Model();
+        $user->agregarParticipante($CI, $Nombre, $Apellido, $Fnac, $Escuela, $Pais, $GeneroP,  $CI_C);
+        $this->tablasCoach();
+    }
+
+    public function eliminarParticipante($CI){
+           
         $user->agregarParticipante($CI, $Nombre, $Apellido, $Fnac, $Escuela, $Pais, $GeneroP, $CI_C);
         $this->tablasCoach();
     }
@@ -140,6 +180,9 @@ class tablasController
     }
 
     //COACH 
+    public function eliminarCoach($CI){
+           
+
     public function eliminarCoach($CI)
     {
 
@@ -151,6 +194,7 @@ class tablasController
     //PARTICIPA 
     public function guardaParticipa()
     {
+ 
 
         $CI_P = $_POST['CI_P'];
         $idTorneo = $_POST['idTorneo'];
@@ -158,7 +202,11 @@ class tablasController
 
         $user = new tablas_Model();
         $user->agregarParticipa($CI_P, $idTorneo, $idCategoria);
+        $this->registrar();
+    }
+}
         $this->registrar($idTorneo);
 
     }
 }
+

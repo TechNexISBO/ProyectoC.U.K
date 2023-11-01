@@ -127,7 +127,11 @@ header {
 }
 
 .tech {
-    color: #fff;
+  color: #ffffff;
+  text-shadow: 1.41px 1.41px black, 2px 0 black, 1.41px -1.41px black,
+  0 -2px black, -1.41px -1.41px black, -2px 0 black,
+ -1.41px 1.41px black, 0 2px black;
+
 }
 
 .izquierda {
@@ -171,6 +175,15 @@ header {
     width: 100%;
     height: 89vh;
 }
+
+.titulosSecciones {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 1.41px 1.41px black, 2px 0 black, 1.41px -1.41px black,
+  0 -2px black, -1.41px -1.41px black, -2px 0 black,
+ -1.41px 1.41px black, 0 2px black;
+}
+
 
 /*Fin de la seccion de incio*/
 
@@ -249,7 +262,9 @@ header {
 }
 
 .centro {
-    margin-top: 200px;
+    margin-top: 10em;
+    margin-bottom: 2em;
+
     display: flex;
     justify-content: center;
     height: 100%;
@@ -348,6 +363,28 @@ input:-webkit-autofill:active {
     width: 100%;
     background-color: #37c294;
     border-top: none;
+}
+
+.carousel-item {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.carousel-item img {
+  height: 25em;
+  object-fit: fill;
+}
+
+.carousel-item h5 , .carousel-item p {
+  text-shadow: 1.41px 1.41px black, 2px 0 black, 1.41px -1.41px black,
+    0 -2px black, -1.41px -1.41px black, -2px 0 black,
+   -1.41px 1.41px black, 0 2px black;
+  color: rgb(255, 255, 255);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
 }
 
 /*Fin servicios*/
@@ -489,7 +526,8 @@ footer h3 {
 
 /*diseño celular*/
 
-@media(max-width:576px) {
+@media(max-width:768px) {
+
 
     /* inicio */
     .pantalla-dividida {
@@ -512,10 +550,7 @@ footer h3 {
       text-align: justify;
     }
   
-    .tech {
-      color: #fff;
-    }
-  
+
     .izquierda {
       background-color: #0cc788;
       height: 70vh;
@@ -525,6 +560,12 @@ footer h3 {
     .izquierda h1 {
       margin-top: 5%;
     }
+
+
+    .izquierda p {
+      font-size: 18px;
+    }
+
   
     .botonCont {
       margin-top: 10px;
@@ -578,15 +619,7 @@ footer h3 {
     }
   
     .servicios-hijo {
-      display: flex;
-      justify-content: space-around;
-      justify-items: center;
-      align-items: center;
-      width: 100%;
-      height: 350px;
-      background-color: #37c294;
-      margin-top: 10px;
-      border-bottom: none;
+      display: none;
     }
   
     .servicios-img {
@@ -621,7 +654,7 @@ footer h3 {
   
     /*Inicio nuestras paginas*/
     .paginas {
-      margin-top: 150px;
+      margin-top: 70px;
       text-align: center;
       width: 100%;
     }
@@ -632,7 +665,7 @@ footer h3 {
       justify-content: center;
       width: 100%;
       height: 100px;
-      margin-top: 10px;
+      margin-bottom: 6em;
     }
   
     .paginas h2 {
@@ -676,7 +709,7 @@ footer h3 {
   
     /*miembros*/
     .miembros {
-      margin-top: 300px;
+      margin-top: 100px;
       text-align: center;
       width: 100%;
     }

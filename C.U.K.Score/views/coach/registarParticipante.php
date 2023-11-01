@@ -43,6 +43,16 @@
 
                 <div class="nombreForm">
                     <h2>Registra</h2>
+                    <p><span class="nombreApp">REGISTRA</span> a un participante al torneo, <span class="nombreApp">C.U.K.Score</span><br> lo espera</p>
+                </div>
+
+                <form action="registarParticipante.php?idTorneo=<?php echo $idTorneo; ?>" method="post" class="form">
+
+                    <input type="hidden" id="idTorneo" name="idTorneo" value="<?php echo $idTorneo; ?>">
+
+                    <!-- CI -->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="CI_P" name="CI_P" placeholder="CI" oninput="validarNumero(this)" maxlength="8" minlength="8">
                     <p><span class="nombreApp">REGISTRA</span> a un participante al torneo, <span
                             class="nombreApp">C.U.K.Score</span><br> lo espera</p>
                 </div>
@@ -65,6 +75,7 @@
 
                     <!-- CATEGORIA -->
                     <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="idCategoria" name="idCategoria" placeholder="CATEGORIA">
                         <input type="text" class="form-control" id="idCategoria" name="idCategoria"
                             placeholder="CATEGORIA" oninput="validarNumero(this)" maxlength="2" minlength="1">
                         <label for="floatingInput">CATEGORIA</label>
@@ -95,6 +106,7 @@
                                 <th>Escuela</th>
                                 <th>Pais</th>
                                 <th>Genero</th>
+
                             </tr>
                         </thead>
                         <tbody>
