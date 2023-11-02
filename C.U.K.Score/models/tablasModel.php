@@ -77,7 +77,7 @@ class tablas_Model {
     /* FUNCIONES DE LA TABLA PARTICIPANTE */
     public function get_participante() 
     {
-        $sqlParticipante = "SELECT PE.CI, PE.Nombre, PE.Apellido, PE.Fnac, PA.Escuela, PA.Pais, PA.GeneroP, PA.CI_C  
+        $sqlParticipante = "SELECT PE.CI, PE.Nombre, PE.Apellido, PE.Fnac, PA.Escuela, PA.GeneroP, PA.CI_C  
         FROM participante PA JOIN persona PE ON PE.CI = PA.CI";
         $resultadoParticipante = $this->db->query($sqlParticipante);
         while ($row = $resultadoParticipante->fetch_assoc()) {
@@ -87,13 +87,13 @@ class tablas_Model {
 
     }
 
-    public function agregarParticipante($CI, $Nombre, $Apellido, $Fnac, $Escuela, $Pais, $GeneroP, $CI_C){
+    public function agregarParticipante($CI, $Nombre, $Apellido, $Fnac, $Escuela, $GeneroP, $CI_C){
         
         $resultadoPersona = $this->db->query("INSERT INTO persona (CI, Nombre, Apellido, Fnac) 
         VALUES ('$CI', '$Nombre', '$Apellido', '$Fnac')");
 
-        $resultadoParticipante = $this->db->query("INSERT INTO participante (CI, Escuela, Pais, GeneroP, CI_C) 
-        VALUES ('$CI', '$Escuela', '$Pais', '$GeneroP', '$CI_C')");
+        $resultadoParticipante = $this->db->query("INSERT INTO participante (CI, Escuela, GeneroP, CI_C) 
+        VALUES ('$CI', '$Escuela', '$GeneroP', '$CI_C')");
 
     }
 
@@ -156,7 +156,7 @@ class tablas_Model {
     /* FUNCIONES DE PARTICIPA */
     public function get_participa() 
     {
-        $sqlParticipa = "SELECT * FROM participa";
+        $sqlParticipa = "SELECT * FROM participar";
         $resultadoParticipa = $this->db->query($sqlParticipa);
         while ($row = $resultadoParticipa->fetch_assoc()) {
             $this->participa[] = $row;
@@ -173,10 +173,9 @@ class tablas_Model {
         return $row;
     }
 
-
     public function agregarParticipa($CI_P, $idTorneo, $idCategoria){
         
-        $resultadoParticipa = $this->db->query("INSERT INTO participa (CI_P, idTorneo, idCategoria) 
+        $resultadoParticipa = $this->db->query("INSERT INTO participar (CI_P, idTorneo, idCategoria) 
         VALUES ('$CI_P', '$idTorneo', '$idCategoria')");
 
     }

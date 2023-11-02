@@ -66,7 +66,6 @@
                                 echo "<td>{$torneo['nombreTorneo']}</td>";
                                 echo "<td>{$torneo['Fecha']}</td>";
                                 echo "<td>{$torneo['Estado']}</td>";
-                                echo "<td><a href='index.php?c=tablas&a=registrar&id=" . $torneo["idTorneo"] . "' class='btn btn-warning'>Modificar</a></td>";
                                 echo "<td><a href='index.php?c=tablas&a=modificar&id=" . $torneo["idTorneo"] . "' class='btn btn-warning'>Modificar</a></td>";
                                 echo "<td>Ingresar</td>";
                                 echo "</tr>";
@@ -158,7 +157,6 @@
                                 <th>Apellido</th>
                                 <th>Fnac</th>
                                 <th>Escuela</th>
-                                <th>Pais</th>
                                 <th>Genero</th>
                                 <th>CI Coach</th>
                                 <th>Eliminar</th>
@@ -173,7 +171,6 @@
                                 echo "<td>{$partcicipante['Apellido']}</td>";
                                 echo "<td>{$partcicipante['Fnac']}</td>";
                                 echo "<td>{$partcicipante['Escuela']}</td>";
-                                echo "<td>{$partcicipante['Pais']}</td>";
                                 echo "<td>{$partcicipante['GeneroP']}</td>";
                                 echo "<td>{$partcicipante['CI_C']}</td>";
                                 echo "<td><a href='index.php?c=tablas&a=eliminarParticipante&id=" . $partcicipante["CI"] . "' class='btn btn-danger'>Eliminar</a></td>";
