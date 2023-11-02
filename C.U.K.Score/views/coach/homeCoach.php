@@ -91,12 +91,6 @@ if (isset($_SESSION['CI_C'])) {
                         <label for="floatingInput">Escuela</label>
                     </div>
 
-                    <!-- Pais -->
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="Pais" name="Pais" placeholder="Pais">
-                        <label for="floatingInput">Pais</label>
-                    </div>
-
                     <!-- Genero -->
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="GeneroP" name="GeneroP" placeholder="Genero">
@@ -128,7 +122,6 @@ if (isset($_SESSION['CI_C'])) {
                                 <th>Apellido</th>
                                 <th>Fnac</th>
                                 <th>Escuela</th>
-                                <th>Pais</th>
                                 <th>Genero</th>
                                 <th>CI Coach</th>
                             </tr>
@@ -142,7 +135,6 @@ if (isset($_SESSION['CI_C'])) {
                                 echo "<td>{$partcicipante['Apellido']}</td>";
                                 echo "<td>{$partcicipante['Fnac']}</td>";
                                 echo "<td>{$partcicipante['Escuela']}</td>";
-                                echo "<td>{$partcicipante['Pais']}</td>";
                                 echo "<td>{$partcicipante['GeneroP']}</td>";
                                 echo "<td>{$partcicipante['CI_C']}</td>";
                                 echo "</tr>";
