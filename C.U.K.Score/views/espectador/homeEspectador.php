@@ -23,34 +23,35 @@
     </header>
     <main class="home">
         <div class="boxParticipante">
-        <div class="div1">
-            <div class="nombrePart">
+        <div class="gridNombrePart">
+            <div class="nombrePartEspectador">
                 <span id="spanNombrePart"><p>Sample<br>Text</p></span>
             </div>
         </div>
-        <div class="div2">
+        <div class="gridNombreKata">
         <div class="nombreKata">
                 <p>kata</p>
                 <span id="spanNombreKata"><p>Sample</p></span>
             </div>
         </div>
-        <div class="div3">
+        <div class="gridColorCint">
             <h2>cinturón</h2>
             <div class="colorCinturon"></div>
         </div>
-        <div class="div4">
+        <div class="gridEscuelaNom">
             <h2>escuela</h2>
             <p>sampletext</p>
         </div>
-        <div class="div5">
+        <div class="gridCajaPuntaje">
         <h2>PUNTAJE</h2>
             <div class="cajaPuntaje">
                 <span id="spanPuntaje"><h2>0.0</h2></span>
             </div>
         </div>
-        <div class="div6">
+        <div class="gridCategoria">
         <h2>categoria</h2>
             <p>0-0</p>
+        </div>
         </div>
     </main>
 </body>
