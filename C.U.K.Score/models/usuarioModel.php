@@ -87,6 +87,19 @@ class usuario_Model
         }
     }
 
+    public function get_validarJuez($idJuez, $contraseñaUser)
+    {
+        $sql = "SELECT * FROM usuario WHERE idJuez = '$idJuez' AND contraseñaUser = '$contraseñaUser'";
+        $resultado = $this->db->query($sql);
+
+        if ($resultado->num_rows > 0) {
+            $usuario = $resultado->fetch_assoc();
+            return $usuario; 
+        } else {
+            return false;
+        }
+    }
+
 }
 
 

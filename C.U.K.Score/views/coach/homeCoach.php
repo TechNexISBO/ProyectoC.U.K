@@ -91,12 +91,13 @@ if (isset($_SESSION['CI_C'])) {
                         <label for="floatingInput">Escuela</label>
                     </div>
 
-                    <!-- Genero -->
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="GeneroP" name="GeneroP" placeholder="Genero">
-                        <label for="floatingInput">Genero</label>
-                    </div>
-
+                    <!-- GENERO -->
+                    <select class="form-select" aria-label="Default select example" id="GeneroP" name="GeneroP">
+                        <option selected>Eliga un Genero</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Femenino</option>
+                
+                    </select>
                     <!-- CI_C -->
                     <input type="hidden" id="CI_C" name="CI_C" value="<?php echo isset($_SESSION['CI_C']) ? $_SESSION['CI_C'] : ''; ?>">
 
