@@ -61,6 +61,25 @@ class usuarioController {
         }
     }
 
+    public function validarJuez() {
+
+        session_start();
+        $idJuez = $_POST['idJuez'];
+        $contraseñaUser = $_POST['contraseñaUser'];
+
+        $user = new usuario_Model();
+        $juez = $user->get_validarJuez($idJuez, $contraseñaUser);
+
+        if ($juez) {
+            $_SESSION['idJuez'] = $idJuez;
+            // Redirige a la página que desees después de iniciar sesión
+            header('Location: views/juez/homeJuez.php');
+            exit();
+        } else {
+            // Lógica para manejar la autenticación fallida, por ejemplo, mostrar un mensaje de error.
+        }
+    }
+
     public function cerrar(){
         session_destroy();
         require_once "views/inicio.html";
