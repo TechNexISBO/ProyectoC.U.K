@@ -37,6 +37,7 @@ if (isset($_SESSION['CI_A'])) {
                 <li><a href="#" id="compitenBtn">Compiten</a></li>
                 <li><a href="#" id="participantesBtn">Participantes</a></li>
                 <li><a href="#" id="puntajesBtn">Puntajes</a></li>
+                <li><a href="#" id="katasBtn">Kata</a></li>
             </ul>
 
             <a href="index.php?c=tablas&a=tablas" class="volver">
@@ -165,6 +166,37 @@ if (isset($_SESSION['CI_A'])) {
                         </tbody>
                     </table>
                 </div>
+            </section>
+        </section>
+
+        <section class="formulario hidden" id="inicioKatas">
+            <section class="miniFormulario">
+
+                <div class="nombreForm">
+                    <h2>INGRESAR KATA</h2>
+                    <p>Ingrese el kata que realizara el participante</p>
+                </div>
+
+                <form action="index.php?c=tablas&a=guarda" method="post" class="form">
+
+                    <!-- Nombre participante -->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="nombreTorneo" name="nombreTorneo"
+                            placeholder="Nombre">
+                        <label for="floatingInput">Nombre</label>
+                    </div>
+
+                    <!-- Nombre Kata -->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="nombreKata" name="nombreKata" placeholder="nombreKata">
+                        <label for="floatingInput">Kata</label>
+                    </div>
+
+                    <div class="formFooter">
+                        <input type="submit" value="Crear" class="button">
+                    </div>
+                </form>
+
             </section>
         </section>
 
