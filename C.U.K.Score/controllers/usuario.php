@@ -44,6 +44,7 @@ class usuarioController {
         if ($usuario) {
             switch ($usuario['tipoUser']) {
                 case 'Administrador':
+                    $_SESSION['CI_A'] = $CI;
                     header("Location: index.php?c=tablas&a=tablas");
                     break;
                 case 'Coach':
@@ -73,7 +74,8 @@ class usuarioController {
         if ($juez) {
             $_SESSION['idJuez'] = $idJuez;
             // Redirige a la página que desees después de iniciar sesión
-            header('Location: views/juez/homeJuez.php');
+            header('Location: index.php?c=puntaje&a=homeJuez');
+
             exit();
         } else {
             // Lógica para manejar la autenticación fallida, por ejemplo, mostrar un mensaje de error.
@@ -87,5 +89,3 @@ class usuarioController {
     }
 
 }
-
-?>

@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (isset($_SESSION['CI_A'])) {
+    $CI_A = $_SESSION['CI_A'];
+} else {
+    header("Location: index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,14 +31,7 @@
                 <img src="assets/img/avatar.svg" alt="logo">
                 <h3>Administracion</h3>
             </div>  
-
-            <ul>
-                <li><a href="#" id="torneoBtn">Torneos</a></li>
-                <li><a href="#" id="categoriaBtn">Categorias</a></li>
-                <li><a href="#" id="participanteBtn">Participantes</a></li>
-                <li><a href="#" id="coachBtn">Coaches</a></li>
-            </ul>
-
+        
             <a href="index.php" class="volver">
                 <img src="assets/img/power.svg" alt="voler">
             </a>
@@ -75,5 +78,7 @@
         </section>
     </main>
     
+
+    <script src="assets/js/modificarTorneo.js"></script>
 </body>
 </html>

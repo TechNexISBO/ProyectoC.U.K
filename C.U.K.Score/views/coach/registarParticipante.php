@@ -115,7 +115,6 @@ if (isset($_SESSION['CI_C'])) {
                                 <th>Apellido</th>
                                 <th>Fnac</th>
                                 <th>Escuela</th>
-                                <th>Pais</th>
                                 <th>Genero</th>
 
                             </tr>
