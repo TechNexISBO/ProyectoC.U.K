@@ -12,6 +12,7 @@ if (isset($_SESSION['idJuez'])) {
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +21,7 @@ if (isset($_SESSION['idJuez'])) {
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- FIN BOOTSTRAP -->
     <link rel="stylesheet" href="assets/css/style.css">
+
     <title>Juez</title>
 </head>
 
@@ -27,11 +29,13 @@ if (isset($_SESSION['idJuez'])) {
     <header>
         <div class="icono-menu">
             <img src="assets/img/flechaDoble.svg" alt="flechas" id="icono-menu">
+
         </div>
 
         <div class="cont-menu active" id="menu">
             <div class="logo">
                 <img src="assets/img/logoCUK.png" alt="logo">
+
                 <h3>C.U.K.Score</h3>
             </div>
 
@@ -42,6 +46,9 @@ if (isset($_SESSION['idJuez'])) {
 
             <a href="index.php" class="volver">
                 <img src="assets/img/power.svg" alt="voler">
+
+            <a href="http://cuk.org.uy/" class="volver">
+
             </a>
         </div>
     </header>
@@ -52,7 +59,6 @@ if (isset($_SESSION['idJuez'])) {
                 <div class="nombreTabla">
                     <h3>Torneo</h3>
                 </div>
-
                 <div class="table-responsive">
                     <table class="table">
                         <thead class="table-dark align-middle">
@@ -105,6 +111,7 @@ if (isset($_SESSION['idJuez'])) {
                                 echo "</tr>";
                             }
                             ?>
+
                         </tbody>
                     </table>
                 </div>
@@ -116,6 +123,7 @@ if (isset($_SESSION['idJuez'])) {
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- FIN BOOTSTRAP -->
     <script src="assets/js/tablasJuez.js"></script>
+
     </main>
 </body>
 

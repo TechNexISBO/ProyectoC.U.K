@@ -56,29 +56,41 @@ if (isset($_SESSION['CI_C'])) {
                     <p><span class="nombreApp">REGISTRA</span> a un participante al torneo, <span class="nombreApp">C.U.K.Score</span><br> lo espera</p>
                 </div>
 
-            
+
                 <form action="index.php?c=tablas&a=guardaParticipa" method="post" class="form">
 
                     <!-- ID TORNEO-->
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="idTorneo" name="idTorneo" placeholder="idTorneo"
-                            value="<?php echo $torneoData["Torneo"]["idTorneo"] ?>" readonly>
+                        <input type="text" class="form-control" id="idTorneo" name="idTorneo" placeholder="idTorneo" value="<?php echo $torneoData["Torneo"]["idTorneo"] ?>" readonly>
                         <label for="floatingInput">idTorneo</label>
                     </div>
 
                     <!-- CI -->
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="CI_P" name="CI_P" placeholder="CI"
-                            oninput="validarNumero(this)" maxlength="8" minlength="8">
+                        <input type="text" class="form-control" id="CI_P" name="CI_P" placeholder="CI" oninput="validarNumero(this)" maxlength="8" minlength="8">
                         <label for="floatingInput">CI</label>
                     </div>
 
                     <!-- CATEGORIA -->
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="idCategoria" name="idCategoria"
-                            placeholder="CATEGORIA" oninput="validarNumero(this)" maxlength="2" minlength="1">
-                        <label for="floatingInput">CATEGORIA</label>
-                    </div>
+                    <select class="form-select" aria-label="Default select example" id="idCategoria" name="idCategoria">
+                        <option selected>Categoria</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                    </select>
 
                     <div class="formFooter">
                         <input type="submit" value="Ingresar" class="button">

@@ -75,13 +75,12 @@ class usuarioController {
             $_SESSION['idJuez'] = $idJuez;
             // Redirige a la página que desees después de iniciar sesión
             header('Location: index.php?c=puntaje&a=homeJuez');
+
             exit();
         } else {
             // Lógica para manejar la autenticación fallida, por ejemplo, mostrar un mensaje de error.
         }
     }
-
-
 
     public function cerrar(){
         session_destroy();

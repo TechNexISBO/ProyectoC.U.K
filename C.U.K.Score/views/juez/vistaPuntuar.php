@@ -8,6 +8,7 @@ if (isset($_SESSION['idJuez'])) {
     exit();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +17,7 @@ if (isset($_SESSION['idJuez'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
     <title>Puntuar</title>
 </head>
 
@@ -23,6 +25,7 @@ if (isset($_SESSION['idJuez'])) {
     <header>
         <div class="icono-menu">
             <img src="assets/img/flechaDoble.svg" alt="flechas" id="icono-menu">
+
         </div>
 
         <div class="cont-menu active" id="menu">
@@ -58,6 +61,7 @@ if (isset($_SESSION['idJuez'])) {
             <div class="sumarPuntos">
                 <button class="sumarPuntosBtn">
                     <img src="assets/img/signoSuma.svg" alt="sumarPuntos">
+
                 </button>
             </div>
             <div class="puntosPart">
@@ -70,6 +74,7 @@ if (isset($_SESSION['idJuez'])) {
             <div class="restarPuntos">
                 <button class="restarPuntosBtn">
                     <img src="assets/img/signoResta.svg" alt="restarPuntos">
+
                 </button>
             </div>
             <div class="colorCintPantallaPuntaje">
@@ -93,6 +98,7 @@ if (isset($_SESSION['idJuez'])) {
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/vistaJuezPuntuar.js"></script>
+
 </body>
 
 </html>

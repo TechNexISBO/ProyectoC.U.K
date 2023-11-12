@@ -141,13 +141,13 @@ body {
     width: 80%;
 }
 
-.table-responsive  {
+.table-responsive {
 
     overflow: auto;
     max-height: 400px;
 }
 
-.formato{
+.formato {
     padding: 2.5em;
 }
 
@@ -178,7 +178,7 @@ body {
     min-height: 30em;
 }
 
-.form { 
+.form {
     margin-top: 5em;
 }
 
@@ -232,6 +232,8 @@ body {
     margin-bottom: 2em;
 }
 
+
+
 /* ESTILOS JS */
 
 .visible {
@@ -251,13 +253,12 @@ body {
 .boxParticipante {
     background-color: #e2eefd;
     border: #004aad solid 2px;
-    border-radius: 1%;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 5em;
+    margin: 2em;
     padding: 2%;
-    width: 70em;
-    height: 35em;
+    width: 75vw;
+    height: 90vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -265,7 +266,7 @@ body {
     grid-row-gap: 0px;
 }
 
-.div1 {
+.gridNombrePart {
     grid-area: 1 / 1 / 2 / 2;
     display: flex;
     flex-direction: column;
@@ -273,7 +274,7 @@ body {
     justify-content: center;
 }
 
-.div2 {
+.gridNombreKata {
     grid-area: 1 / 2 / 2 / 3;
     background-color: antiquewhite;
     display: flex;
@@ -282,7 +283,8 @@ body {
     justify-content: center;
 }
 
-.div1 , .div2 {
+.gridNombrePart,
+.gridNombreKata {
     background-color: #0138a6;
     border: black solid 2px;
     font-size: 40px;
@@ -290,7 +292,7 @@ body {
     margin: 10px;
 }
 
-.div3 {
+.gridColorCint {
     grid-area: 1 / 3 / 2 / 4;
     font-size: 40px;
     display: flex;
@@ -300,14 +302,14 @@ body {
 }
 
 .colorCinturon {
-    width: 200px;
+    width: 27vh;
     height: 60px;
     border: black solid 2px;
     border-radius: 25px;
     background: linear-gradient(to right, #004aad 50%, #ff3131 50%);
 }
 
-.div4 {
+.gridEscuelaNom {
     grid-area: 2 / 1 / 4 / 2;
     font-size: 40px;
     display: flex;
@@ -316,7 +318,7 @@ body {
     justify-content: center;
 }
 
-.div5 {
+.gridCajaPuntaje {
     grid-area: 2 / 2 / 4 / 3;
     font-size: 40px;
     display: flex;
@@ -325,7 +327,7 @@ body {
     justify-content: center;
 }
 
-.div6 {
+.gridCategoria {
     grid-area: 2 / 3 / 4 / 4;
     font-size: 40px;
     display: flex;
@@ -341,6 +343,174 @@ body {
     padding: 1em;
 }
 
+/* VISTA PUNTUAR */
+.wrapPuntuar {
+    margin: 2em;
+    background-color: #e2eefd;
+    border: #004aad solid 2px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: min(100%, 100%);
+    height: calc(100vh - 4px);
+    box-sizing: border-box;
+    text-transform: uppercase;
+    /*GRID*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    /*FIN GRID*/
+}
+
+.nombrePart,
+.escuelaPart,
+.categoriaPartPantallaPuntaje,
+.sumarPuntos,
+.puntosPart,
+.restarPuntos,
+.colorCintPantallaPuntaje,
+.enviarPuntos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nombrePart {
+    grid-area: 1 / 1 / 2 / 2;
+    border-radius: 15px 0 0 15px;
+    border-top: 3px solid #004aad;
+    border-left: 3px solid #004aad;
+    border-bottom: 3px solid #004aad;
+    margin-left: 1em;
+}
+
+.escuelaPart {
+    grid-area: 1 / 2 / 2 / 3;
+    border: 3px solid #004aad;
+}
+
+.categoriaPartPantallaPuntaje {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 15px 15px 0;
+    border-top: 3px solid #004aad;
+    border-right: 3px solid #004aad;
+    border-bottom: 3px solid #004aad;
+    margin-right: 1em;
+}
+
+.nombrePart,
+.escuelaPart,
+.categoriaPartPantallaPuntaje {
+    text-align: center;
+    background-color: white;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.nombrePart h2,
+.escuelaPart h2,
+.categoriaPartPantallaPuntaje h2 {
+    font-size: 40px;
+}
+
+@media (max-width: 1023px){
+    .nombrePart h2,
+    .escuelaPart h2,
+    .categoriaPartPantallaPuntaje h2 {
+        font-size: 30px;
+    } 
+}
+
+@media (max-width: 767px) {
+    .nombrePart h2,
+    .escuelaPart h2,
+    .categoriaPartPantallaPuntaje h2 {
+        font-size: 20px;
+    } 
+
+    .colorCinturon{
+        width: 6em;
+    }
+}
+
+
+.sumarPuntos {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.sumarPuntosBtn,
+.restarPuntosBtn,
+.enviarPuntosBtn {
+    background: none;
+    border: none;
+}
+
+.sumarPuntosBtn img,
+.restarPuntosBtn img {
+    max-width: 100%;
+    display: block;
+}
+
+.puntosPart {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.puntos {
+    width: fit-content;
+    height: fit-content;
+    padding: 3em;
+    background-color: white;
+    border: 2px solid #004aad;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.puntos h2 {
+    font-size: 80px;
+}
+
+.restarPuntos {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.colorCintPantallaPuntaje {
+    grid-area: 3 / 1 / 4 / 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.enviarPuntos {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.enviarPuntosBtn {
+    background-color: #004aad;
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 40px;
+    height: 80px;
+    width: 200px;
+}
+
+.enviarPuntosBtn:hover,
+.sumarPuntosBtn:hover,
+.restarPuntosBtn:hover {
+    transform: scale(0.95);
+}
+
+.enviarPuntosBtn,
+.sumarPuntosBtn,
+.restarPuntosBtn {
+    transition: transform 0.3s ease;
+}
+/* FIN VISTA PUNTUAR */
 
 /* MEDIA QUERYS */
 
@@ -383,3 +553,4 @@ body {
         margin-top: 5em;
     }
 }
+
