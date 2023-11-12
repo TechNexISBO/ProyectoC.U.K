@@ -26,6 +26,10 @@ const inicioCompiten = document.getElementById('inicioCompiten');
 const puntajesBtn = document.getElementById('puntajesBtn');
 const inicioPuntajes = document.getElementById('inicioPuntajes');
 
+//KATAS
+const katasBtn = document.getElementById('katasBtn');
+const inicioKatas = document.getElementById('inicioKatas');
+
 /* TABLAS */
 
 //PARTICIPANTES
@@ -35,6 +39,8 @@ participantesBtn.addEventListener('click', () => {
     inicioCompiten.classList.add('hidden'); // Añade el hidden a COMPITEN
 
     inicioPuntajes.classList.add('hidden'); // Añade el hidden a PUNTAJE
+
+    inicioKatas.classList.add('hidden'); // Añade el hidden a KATAS
 });
 
 //COMPITEN
@@ -44,6 +50,8 @@ compitenBtn.addEventListener('click', () => {
     inicioPuntajes.classList.add('hidden'); // Añade el hidden a PUNTAJE
 
     inicioParticipantes.classList.add('hidden'); // Añade el hidden a PARTICIPANTES
+
+    inicioKatas.classList.add('hidden'); // Añade el hidden a KATAS
 });
 
 //PUNTAJE
@@ -53,4 +61,17 @@ puntajesBtn.addEventListener('click', () => {
     inicioParticipantes.classList.add('hidden'); // Añade el hidden a PARTICIPANTES
 
     inicioCompiten.classList.add('hidden'); // Añade el hidden a COMPITEN
+
+    inicioKatas.classList.add('hidden'); // Añade el hidden a KATAS
+});
+
+//KATAS
+katasBtn.addEventListener('click', () => {
+    inicioKatas.classList.remove('hidden'); // Quita el hidden de PUNTAJE
+
+    inicioParticipantes.classList.add('hidden'); // Añade el hidden a PARTICIPANTES
+
+    inicioCompiten.classList.add('hidden'); // Añade el hidden a COMPITEN
+
+    inicioPuntajes.classList.add('hidden'); // Añade el hidden a PUNTAJE
 });
