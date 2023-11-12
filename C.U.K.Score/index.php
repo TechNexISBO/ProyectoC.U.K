@@ -5,6 +5,7 @@ require_once "core/routes.php";
 require_once "config/database.php";
 require_once "controllers/usuario.php";
 require_once "controllers/tablas.php";
+require_once "controllers/tablas.php";
 
 if (isset($_GET['c'])) {
 

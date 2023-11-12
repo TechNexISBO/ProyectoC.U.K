@@ -1,22 +1,64 @@
 <?php
 
-class llavesController {
+class llavesController
+{
 
-    public function __construct(){
-        require_once "models/tablasModel.php";
+    public function __construct()
+    {
+        require_once "models/llavesModel.php";
     }
 
-    public function llaves($idTorneo, $idCategoria, $CI){
-        $user = new tablas_Model();
 
-        $datoTorneo["Torneo"] = $user->get_torneos($idTorneo);
-        $datoCategoria["Categoria"] = $user->get_categorias($idCategoria);
-        $datoParticipante["Participante"] = $user->get_participantes($CI);
-        $datoCoach["Coach"] = $user->get_coaches($CI);
 
-        require_once "views/admin/torneoAdmin.php";
+    public function gestionar($idTorneo)
+    {
+        $user = new llaves_Model();
+
+        //TORNEO
+        $torneoData["idTorneo"] = $idTorneo;
+        $torneoData["Torneo"] = $user->get_torneos($idTorneo);
+
+        //PARTICIPANTES
+        $participanteData["Torneo"] = $user->get_participante($idTorneo);
+
+        //CON QUIEN COMPITEN
+        $participarData["idTorneo"] = $idTorneo;
+        $participarData["Torneo"] = $user->get_participar($idTorneo);
+
+        require_once "views/admin/gestionarAdmin.php";
     }
-  
+
+
+    public function organizar()
+    {
+        $idTorneo = $_POST['idTorneo'];
+
+        $user = new llaves_Model();
+
+        $competidor = $user->get_participa($idTorneo);
+
+        shuffle($competidor);
+
+        $Compite = 1;
+
+        $esImpar = count($competidor) % 2 != 0;
+        $limite = $esImpar ? count($competidor) - 1 : count($competidor);
+
+
+            for ($i = 0; $i < $limite; $i += 2) {
+
+               $user->actualizarCompetidor($competidor[$i]['idCompite'], "Rojo", $Compite, $idTorneo);
+               $user->actualizarCompetidor($competidor[$i + 1]['idCompite'], "Azul", $Compite, $idTorneo);
+
+               $Compite++;
+            }
+
+            if ($esImpar) {
+                $user->actualizarCompetidor($competidor[$limite]['idCompite'], "Rojo", -1, $idTorneo);
+            }
+        
+
+        header("Location: index.php?c=llaves&a=gestionar&id=$idTorneo");
+
+    }
 }
-
-?>

@@ -228,6 +228,9 @@ body {
     cursor: pointer;
 }
 
+.form-select {
+    margin-bottom: 2em;
+}
 
 /* ESTILOS JS */
 

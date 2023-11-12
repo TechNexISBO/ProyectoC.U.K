@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (isset($_SESSION['CI_A'])) {
+    $CI_A = $_SESSION['CI_A'];
+} else {
+    header("Location: index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -55,7 +65,7 @@
                                 <th>Fecha</th>
                                 <th>Estado</th>
                                 <th>Editar</th>
-                                <th>Ingresar</th>
+                                <th>Gestionar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -67,7 +77,8 @@
                                 echo "<td>{$torneo['Fecha']}</td>";
                                 echo "<td>{$torneo['Estado']}</td>";
                                 echo "<td><a href='index.php?c=tablas&a=modificar&id=" . $torneo["idTorneo"] . "' class='btn btn-warning'>Modificar</a></td>";
-                                echo "<td>Ingresar</td>";
+                                echo "<td><a href='index.php?c=llaves&a=gestionar&id=" . $torneo["idTorneo"] . "' class='btn btn-info'>Gestionar</a></td>";
+
                                 echo "</tr>";
                             }
                             ?>
@@ -76,7 +87,7 @@
                 </div>
             </section>
         </section>
-
+      
         <!-- CREAR TORNEO -->
         <section class="formulario hidden" id="crearTorneo">
             <section class="miniFormulario">
@@ -257,9 +268,7 @@
     <!-- INICO BOOTSTRAP -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- FIN BOOTSTRAP -->
-
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/admin.js"></script>
+    <script src="assets/js/homeAdmin.js"></script>
 </body>
 
 </html>

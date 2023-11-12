@@ -44,6 +44,7 @@ class usuarioController {
         if ($usuario) {
             switch ($usuario['tipoUser']) {
                 case 'Administrador':
+                    $_SESSION['CI_A'] = $CI;
                     header("Location: index.php?c=tablas&a=tablas");
                     break;
                 case 'Coach':
@@ -61,6 +62,27 @@ class usuarioController {
         }
     }
 
+    public function validarJuez() {
+
+        session_start();
+        $idJuez = $_POST['idJuez'];
+        $contraseñaUser = $_POST['contraseñaUser'];
+
+        $user = new usuario_Model();
+        $juez = $user->get_validarJuez($idJuez, $contraseñaUser);
+
+        if ($juez) {
+            $_SESSION['idJuez'] = $idJuez;
+            // Redirige a la página que desees después de iniciar sesión
+            header('Location: index.php?c=puntaje&a=homeJuez');
+            exit();
+        } else {
+            // Lógica para manejar la autenticación fallida, por ejemplo, mostrar un mensaje de error.
+        }
+    }
+
+
+
     public function cerrar(){
         session_destroy();
         require_once "views/inicio.html";
@@ -68,5 +90,3 @@ class usuarioController {
     }
 
 }
-
-?>

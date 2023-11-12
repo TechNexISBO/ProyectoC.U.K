@@ -8,7 +8,7 @@ class tablas_Model {
     private $participante;
     private $coach;
     private $kata;
-    private $participa;
+    private $participar;
 
     public function __construct()
     {
@@ -18,7 +18,7 @@ class tablas_Model {
         $this->participante = array();
         $this->coach = array();
         $this->kata = array();
-        $this->participa = array();
+        $this->participar = array();
     }
 
 
@@ -67,7 +67,7 @@ class tablas_Model {
     }
 
     public function get_categorias($idCategoria){
-        $sqlCategoria = "SELECT * FROM categoria WHERE idTorneo='$idCategoria' LIMIT 1";
+        $sqlCategoria = "SELECT * FROM categoria WHERE idCategoria='$idCategoria' LIMIT 1";
         $resultadoCategoria = $this->db->query($sqlCategoria);
         $row = $resultadoCategoria->fetch_assoc();
 
@@ -159,9 +159,9 @@ class tablas_Model {
         $sqlParticipa = "SELECT * FROM participar";
         $resultadoParticipa = $this->db->query($sqlParticipa);
         while ($row = $resultadoParticipa->fetch_assoc()) {
-            $this->participa[] = $row;
+            $this->participar[] = $row;
         }
-        return $this->participa;
+        return $this->participar;
 
     }
 
