@@ -64,7 +64,7 @@ if (isset($_SESSION['idJuez'])) {
                                 echo "<td>{$categoria['GeneroC']}</td>";
                                 echo "<td>{$categoria['Equipo']}</td>";
                                 echo "<td>{$categoria['Edad']}</td>";
-                                echo "<td><a href='index.php?c=tablas&a=categoriaJuez&id=" . $categoria["idCategoria"] . "' class='btn btn-success'>Participantes</a></td>";
+                                echo "<a href='index.php?c=puntaje&a=participanteJuez&idTorneo={$idTorneoActual}&idCategoria={$categoria['idCategoria']}' class='btn btn-success'>Participantes</a>";
                                 echo "</tr>";
                             }
                             ?>
@@ -78,6 +78,7 @@ if (isset($_SESSION['idJuez'])) {
     <!-- INICO BOOTSTRAP -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- FIN BOOTSTRAP -->
-    <script src="assets/js/categoriasJuez.js"></script>
+    <script src="assets/js/juez/categoriasJuez.js"></script>
 </body>
+
 </html>

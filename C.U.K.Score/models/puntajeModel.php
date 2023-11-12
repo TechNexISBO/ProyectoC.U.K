@@ -40,7 +40,7 @@ class puntaje_model
         $sql = "SELECT * FROM torneo WHERE idTorneo='$idTorneo' LIMIT 1";
 
         $resultado = $this->db->query($sql);
-        
+
         $row = $resultado->fetch_assoc();
 
         return $row;
@@ -103,9 +103,67 @@ class puntaje_model
     }
 
     /* PARTICIPANTES */
-    public function get_participante()
+    public function get_participante($idTorneo)
     {
-        $sql = "SELECT * FROM participante";
+        $sql = "SELECT PA.CI, P.Nombre, P.Apellido, C.Edad, PAR.Cinturon FROM participante PA
+        JOIN persona P ON P.CI = PA.CI
+        JOIN participar PAR ON PAR.CI_P = PA.CI
+        JOIN categoria C ON C.idCategoria = PAR.idCategoria
+        WHERE PAR.idTorneo = $idTorneo ORDER BY PAR.idTorneo DESC";
+
+        $resultado = $this->db->query($sql);
+
+        while ($row = $resultado->fetch_assoc()) {
+            $this->participante[] = $row;
+        }
+
+        return $this->participante;
+    }
+
+    public function get_participantes($idTorneo)
+    {
+        $sql = "SELECT P.CI, P.Nombre, P.Apellido, C.Edad, PAR.Cinturon FROM participante PA
+        JOIN persona P ON P.CI = PA.CI
+        JOIN participar PAR ON PAR.CI_P = PA.CI
+        JOIN torneo T ON T.idTorneo = PAR.idTorneo
+        JOIN categoria C ON C.idCategoria = PAR.idCategoria
+        WHERE PAR.idTorneo = $idTorneo LIMIT 1";
+
+        $resultado = $this->db->query($sql);
+
+        $row = $resultado->fetch_assoc();
+
+        return $row;
+    }
+
+    public function get_participan($idTorneo, $CI)
+    {
+        $sql = "SELECT P.Nombre, P.Apellido, PA.Escuela, K.nombreKata, PAR.Cinturon, C.Edad FROM participante PA
+        JOIN persona P ON P.CI = PA.CI
+        JOIN participar PAR ON PAR.CI_P = PA.CI
+        JOIN tiene T ON T.CI_P = PA.CI
+        JOIN kata K ON K.idKata = T.idKata
+        JOIN categoria C ON C.idCategoria = PAR.idCategoria
+        WHERE PAR.idTorneo = '$idTorneo' AND P.CI = '$CI'";
+
+        $resultado = $this->db->query($sql);
+
+        while ($row = $resultado->fetch_assoc()) {
+            $this->participante[] = $row;
+        }
+
+        return $this->participante;
+    }
+
+    public function get_puntuarP($idTorneo, $CI)
+    {
+        $sql = "SELECT P.Nombre, P.Apellido, PA.Escuela, K.nombreKata, PAR.Cinturon, C.Edad FROM participante PA
+        JOIN persona P ON P.CI = PA.CI
+        JOIN participar PAR ON PAR.CI_P = PA.CI
+        JOIN tiene T ON T.CI_P = PA.CI
+        JOIN kata K ON K.idKata = T.idKata
+        JOIN categoria C ON C.idCategoria = PAR.idCategoria
+        WHERE PAR.idTorneo = '$idTorneo' AND P.CI = '$CI' LIMIT 1";
 
         $resultado = $this->db->query($sql);
 

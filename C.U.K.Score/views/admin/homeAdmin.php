@@ -268,7 +268,7 @@ if (isset($_SESSION['CI_A'])) {
     <!-- INICO BOOTSTRAP -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- FIN BOOTSTRAP -->
-    <script src="assets/js/homeAdmin.js"></script>
+    <script src="assets/js/admin/homeAdmin.js"></script>
 </body>
 
 </html>

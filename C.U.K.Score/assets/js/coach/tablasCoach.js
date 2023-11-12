@@ -9,6 +9,18 @@ const participanteBtn = document.getElementById('participanteBtn');
 const categoriaBtn = document.getElementById('categoriaBtn');
 const torneoBtn = document.getElementById('torneoBtn');
 
+/* MENU HAMBURGUESA */ 
+const iconoMenu = document.querySelector('#icono-menu');
+const menu = document.querySelector('#menu');
+
+// MENU HAMBURGUESA
+iconoMenu.addEventListener('click', (e) => {
+    // Alternamos estilos para el menú y body
+    menu.classList.toggle('active');
+    document.body.classList.toggle('opacity');
+    iconoMenu.classList.toggle('invertido');
+});
+
 // TABLAS 
 ingresarParticipanteBtn.addEventListener('click', () =>{
     ingresarParticipante.classList.remove('hidden'); // Quita el hidden del INGRESAR PARTICIPANTES

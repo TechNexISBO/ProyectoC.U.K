@@ -122,7 +122,7 @@ if (isset($_SESSION['idJuez'])) {
     <!-- INICO BOOTSTRAP -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- FIN BOOTSTRAP -->
-    <script src="assets/js/tablasJuez.js"></script>
+    <script src="assets/js/juez/tablasJuez.js"></script>
 
     </main>
 </body>

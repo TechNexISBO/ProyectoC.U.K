@@ -32,7 +32,7 @@ if (isset($_SESSION['CI_A'])) {
                 <h3>Administracion</h3>
             </div>  
         
-            <a href="index.php" class="volver">
+            <a href="index.php?c=tablas&a=tablas" class="volver">
                 <img src="assets/img/power.svg" alt="voler">
             </a>
         </div>
@@ -79,6 +79,6 @@ if (isset($_SESSION['CI_A'])) {
     </main>
     
 
-    <script src="assets/js/modificarTorneo.js"></script>
+    <script src="assets/js/admin/modificarTorneo.js"></script>
 </body>
 </html>

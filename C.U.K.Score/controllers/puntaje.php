@@ -23,18 +23,22 @@ class puntajeController
     public function categoriaJuez($idTorneo) 
     {
         $user = new puntaje_model();
-
+        
         //Detectar categorias de un torneo
         $torneoData["idTorneo"] = $idTorneo;
-        $torneoData["Torneo"] = $user->get_categorias($idTorneo);
+        $torneoData["Torneo"] = $user->get_participantes($idTorneo);
 
-        //Categorias
-        $categoriaData = $user->get_categoria();
+        //Participante
+        $participanteData = $user->get_participante($idTorneo);
 
+        require_once "views/juez/participantesJuez.php";
+    }
+
+    public function puntuarJuez($idTorneo, $CI)
+    {
+        $user = new puntaje_model();
 
         
-
-        require_once "views/juez/categoriaJuez.php";
     }
 
     
