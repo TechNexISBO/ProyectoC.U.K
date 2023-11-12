@@ -194,7 +194,6 @@ if (isset($_SESSION['CI_C'])) {
                                 <th>Nombre</th>
                                 <th>Fcracion</th>
                                 <th>Estado</th>
-                                <th>Ver</th>
                                 <th>Registrar</th>
                             </tr>
                         </thead>
@@ -206,7 +205,6 @@ if (isset($_SESSION['CI_C'])) {
                                 echo "<td>{$torneo['nombreTorneo']}</td>";
                                 echo "<td>{$torneo['Fecha']}</td>";
                                 echo "<td>{$torneo['Estado']}</td>";
-                                echo "<td>Ver</td>";
                                 echo "<td><a href='index.php?c=tablas&a=registrar&id=" . $torneo["idTorneo"] . "' class='btn btn-success'>Registrar</a></td>";
                                 echo "</tr>";
                             }
@@ -224,8 +222,7 @@ if (isset($_SESSION['CI_C'])) {
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- FIN BOOTSTRAP -->
 
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/tablasCoach.js"></script>
+    <script src="assets/js/coach/tablasCoach.js"></script>
 </body>
 
 </html>

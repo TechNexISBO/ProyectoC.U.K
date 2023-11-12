@@ -175,8 +175,7 @@ if (isset($_SESSION['CI_C'])) {
     <!-- INICO BOOTSTRAP -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- FIN BOOTSTRAP -->
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/registrar.js"></script>
+    <script src="assets/js/coach/registrar.js"></script>
 </body>
 
 </html>
