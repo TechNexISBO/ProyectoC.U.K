@@ -38,12 +38,6 @@
 
                     <h3>C.U.K.Score</h3>
                 </div>
-
-                <ul>
-                    <li><a href="#" id="participanteBtn">Participante</a></li>
-                    <li><a href="#" id="kataBtn">Kata</a></li>
-                </ul>
-
                 <a href="index.php" class="volver">
                     <img src="assets/img/power.svg" alt="voler">
 
@@ -55,8 +49,8 @@
         <main class="home">
 
             <!-- TABLA PARTICIPANTE -->
-            <section class="formatoTablas visible" id="inicioParticipante>
-            <section class=" formato">
+            <section class="formatoTablas visible" id="inicioParticipante">
+            <section class="formato">
                 <div class="nombreTabla">
                     <h3>Participante</h3>
                 </div>
@@ -101,36 +95,6 @@
                     </table>
                 </div>
             </section>
-            </section>
-
-            <!-- TABLA KATA -->
-            <section class="formatoTablas hidden" id="inicioKata">
-                <section class="formato">
-                    <div class="nombreTabla">
-                        <h3>Katas</h3>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead class="table-dark align-middle">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Nombre</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                foreach ($kataData as $kata) {
-                                    echo "<tr>";
-                                    echo "<td>{$kata['idKata']}</td>";
-                                    echo "<td>{$kata['nombreKata']}</td>";
-                                    echo "</tr>";
-                                }
-                                ?>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
             </section>
 
         </main>

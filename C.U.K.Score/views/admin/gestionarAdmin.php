@@ -139,6 +139,7 @@ if (isset($_SESSION['CI_A'])) {
                             <tr>
                                 <th>CI</th>
                                 <th>N°Juez</th>
+                                <th>Valor</th>
                                 <th>Kata</th>
                                 <th>Categoria</th>
                                 <th>Genero</th>
@@ -153,6 +154,7 @@ if (isset($_SESSION['CI_A'])) {
                                 echo "<tr>";
                                 echo "<td>{$puntaje['CI_P']}</td>";
                                 echo "<td>{$puntaje['idJuez']}</td>";
+                                echo "<td>{$puntaje['Valor']}</td>";
                                 echo "<td>{$puntaje['idKata']}</td>";
                                 echo "<td>{$puntaje['Edad']}</td>";
                                 echo "<td>{$puntaje['GeneroC']}</td>";
@@ -177,7 +179,7 @@ if (isset($_SESSION['CI_A'])) {
                     <p>Ingrese el kata que realizara el participante</p>
                 </div>
 
-                <form action="index.php?c=llaves&a=gestionar" method="post" class="form">
+                <form action="index.php?c=tablas&a=agregarKata" method="post" class="form">
 
                     <!-- CI -->
                     <div class="form-floating mb-3">

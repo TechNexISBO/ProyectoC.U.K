@@ -160,14 +160,5 @@ class tablasController
         $this->registrar($idTorneo);
 
     }
-    //KATA 
-    public function agregarKata()
-    {
-        $CI_P = $_POST['CI_P'];
-        $idKata = $_POST['idKata'];
-
-        $user = new tablas_Model();
-        $user->agregarKata($CI_P, $idKata);
-        $this->tablas();
-    }
+    
 }
