@@ -103,31 +103,16 @@ class puntaje_model
     }
 
     /* PARTICIPANTES */
-    public function get_participante($idTorneo)
+
+    public function get_participas($CI)
     {
-        $sql = "SELECT PA.CI, P.Nombre, P.Apellido, C.Edad, PAR.Cinturon FROM participante PA
+        $sql = "SELECT PA.CI, P.Nombre, P.Apellido, PA.Escuela, K.nombreKata, PAR.Cinturon, PAR.idTorneo, C.Edad  FROM participante PA
         JOIN persona P ON P.CI = PA.CI
         JOIN participar PAR ON PAR.CI_P = PA.CI
         JOIN categoria C ON C.idCategoria = PAR.idCategoria
-        WHERE PAR.idTorneo = $idTorneo ORDER BY PAR.idTorneo DESC";
-
-        $resultado = $this->db->query($sql);
-
-        while ($row = $resultado->fetch_assoc()) {
-            $this->participante[] = $row;
-        }
-
-        return $this->participante;
-    }
-
-    public function get_participantes($idTorneo)
-    {
-        $sql = "SELECT P.CI, P.Nombre, P.Apellido, C.Edad, PAR.Cinturon FROM participante PA
-        JOIN persona P ON P.CI = PA.CI
-        JOIN participar PAR ON PAR.CI_P = PA.CI
-        JOIN torneo T ON T.idTorneo = PAR.idTorneo
-        JOIN categoria C ON C.idCategoria = PAR.idCategoria
-        WHERE PAR.idTorneo = $idTorneo LIMIT 1";
+		JOIN tiene T ON T.CI_P = PA.CI 
+        JOIN kata K ON K.idKata = T.idKata
+        WHERE PA.CI = $CI LIMIT 1";
 
         $resultado = $this->db->query($sql);
 
@@ -136,15 +121,14 @@ class puntaje_model
         return $row;
     }
 
-    public function get_participan($idTorneo, $CI)
+    public function get_participante()
     {
-        $sql = "SELECT P.Nombre, P.Apellido, PA.Escuela, K.nombreKata, PAR.Cinturon, C.Edad FROM participante PA
+        $sql = "SELECT PA.CI, P.Nombre, P.Apellido, PA.Escuela, K.nombreKata, PAR.Cinturon, PAR.idTorneo, C.Edad  FROM participante PA
         JOIN persona P ON P.CI = PA.CI
         JOIN participar PAR ON PAR.CI_P = PA.CI
-        JOIN tiene T ON T.CI_P = PA.CI
-        JOIN kata K ON K.idKata = T.idKata
         JOIN categoria C ON C.idCategoria = PAR.idCategoria
-        WHERE PAR.idTorneo = '$idTorneo' AND P.CI = '$CI'";
+		JOIN tiene T ON T.CI_P = PA.CI 
+        JOIN kata K ON K.idKata = T.idKata";
 
         $resultado = $this->db->query($sql);
 
@@ -155,22 +139,5 @@ class puntaje_model
         return $this->participante;
     }
 
-    public function get_puntuarP($idTorneo, $CI)
-    {
-        $sql = "SELECT P.Nombre, P.Apellido, PA.Escuela, K.nombreKata, PAR.Cinturon, C.Edad FROM participante PA
-        JOIN persona P ON P.CI = PA.CI
-        JOIN participar PAR ON PAR.CI_P = PA.CI
-        JOIN tiene T ON T.CI_P = PA.CI
-        JOIN kata K ON K.idKata = T.idKata
-        JOIN categoria C ON C.idCategoria = PAR.idCategoria
-        WHERE PAR.idTorneo = '$idTorneo' AND P.CI = '$CI' LIMIT 1";
 
-        $resultado = $this->db->query($sql);
-
-        while ($row = $resultado->fetch_assoc()) {
-            $this->participante[] = $row;
-        }
-
-        return $this->participante;
-    }
 }

@@ -41,21 +41,20 @@ if (isset($_SESSION['idJuez'])) {
         <div class="wrapPuntuar">
             <div class="nombrePart">
                 <span>
-                    <h2>nombre:</h2>
-                    <h2>pepe<br>gomez</h2>
+                <?php echo "<h2>{$participanteData["Participante"]['Nombre']}</h2>"; ?>
+                <?php echo "<h2>{$participanteData["Participante"]['Apellido']}</h2>"; ?>               
                 </span>
             </div>
             <div class="escuelaPart">
                 <span>
                     <h2>ESCUELA:</h2>
-                    <h2>sampletext</h2>
+                    <?php echo "<h2>{$participanteData["Participante"]['Escuela']}</h2>"; ?>    
                 </span>
             </div>
             <div class="kataPantallaPuntaje">
                 <h2>Kata: </h2>
                 <span>
-                    <h2></h2>
-                </span>
+                <?php echo "<h2>{$participanteData["Participante"]['nombreKata']}</h2>"; ?>                    </span>
             </div>
 
             <div class="sumarPuntos">
@@ -78,26 +77,24 @@ if (isset($_SESSION['idJuez'])) {
                 </button>
             </div>
             <div class="colorCintPantallaPuntaje">
-                <h2>cinturon</h2>
-                <div class="colorCinturon"></div>
-            </div>
+                <h2>Cinturon: </h2>
+                <?php echo "<h2>{$participanteData["Participante"]['Cinturon']}</h2>"; ?>                </div>
             <div class="enviarPuntos">
                 <button class="enviarPuntosBtn">
                     ENVIAR
                 </button>
             </div>
             <div class="categoriaPartPantallaPuntaje">
-                <h2>Categoria:</h2>
+                <h2>Categoria: </h2>
                 <span>
-                    <h2>0-0</h2>
+                <?php echo "<h2>{$participanteData["Participante"]['Edad']}</h2>"; ?>                </div>
                 </span>
             </div>
 
         </div>
     </main>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/vistaJuezPuntuar.js"></script>
+    <script src="assets/js/juez/vistaJuezPuntuar.js"></script>
 
 </body>
 

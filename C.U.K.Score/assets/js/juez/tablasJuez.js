@@ -1,14 +1,14 @@
 /* TABLAS JUEZ */
-const inicioTorneo = document.getElementById('inicioTorneo')
+const inicioParticipante = document.getElementById('inicioParticipante')
 const inicioKata = document.getElementById('inicioKata')
 
-const torneoBtn = document.getElementById('torneoBtn');
+const participanteBtn = document.getElementById('participanteBtn');
 const kataBtn = document.getElementById('kataBtn');
 
 // TABLAS
 
-torneoBtn.addEventListener('click', () => {
-    inicioTorneo.classList.remove('hidden');  // Quita el hidden de TORNEO
+participanteBtn.addEventListener('click', () => {
+    inicioParticipante.classList.remove('hidden');  // Quita el hidden de PARTICIPANTE
 
     inicioKata.classList.add('hidden'); // Añade el hidden a KATAS
 });
@@ -16,5 +16,5 @@ torneoBtn.addEventListener('click', () => {
 kataBtn.addEventListener('click', () => {
     inicioKata.classList.remove('hidden'); // Quita el hidden a KATAS
 
-    inicioTorneo.classList.add('hidden');  // Añade el hidden de TORNEO
+    inicioParticipante.classList.add('hidden');  // Añade el hidden de PARTICIPANTE
 });

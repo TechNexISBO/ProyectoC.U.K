@@ -366,9 +366,16 @@ body {
     /*FIN GRID*/
 }
 
+.categoriaPartPantallaPuntaje {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
 .nombrePart,
 .escuelaPart,
-.categoriaPartPantallaPuntaje,
+.kataPantallaPuntaje,
 .sumarPuntos,
 .puntosPart,
 .restarPuntos,
@@ -393,7 +400,7 @@ body {
     border: 3px solid #004aad;
 }
 
-.categoriaPartPantallaPuntaje {
+.kataPantallaPuntaje {
     grid-area: 1 / 3 / 2 / 4;
     display: flex;
     flex-direction: column;
@@ -406,7 +413,7 @@ body {
 
 .nombrePart,
 .escuelaPart,
-.categoriaPartPantallaPuntaje {
+.kataPantallaPuntaje {
     text-align: center;
     background-color: white;
     margin-top: 2em;
@@ -415,14 +422,14 @@ body {
 
 .nombrePart h2,
 .escuelaPart h2,
-.categoriaPartPantallaPuntaje h2 {
+.kataPantallaPuntaje h2 {
     font-size: 40px;
 }
 
 @media (max-width: 1023px){
     .nombrePart h2,
     .escuelaPart h2,
-    .categoriaPartPantallaPuntaje h2 {
+    .kataPantallaPuntaje h2 {
         font-size: 30px;
     } 
 }
@@ -430,7 +437,7 @@ body {
 @media (max-width: 767px) {
     .nombrePart h2,
     .escuelaPart h2,
-    .categoriaPartPantallaPuntaje h2 {
+    .kataPantallaPuntaje h2 {
         font-size: 20px;
     } 
 

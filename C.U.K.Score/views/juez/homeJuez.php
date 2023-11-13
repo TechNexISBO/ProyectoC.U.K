@@ -40,48 +40,59 @@ if (isset($_SESSION['idJuez'])) {
             </div>
 
             <ul>
-                <li><a href="#" id="torneoBtn">Torneo</a></li>
+                <li><a href="#" id="participanteBtn">Participante</a></li>
                 <li><a href="#" id="kataBtn">Kata</a></li>
             </ul>
 
             <a href="index.php" class="volver">
                 <img src="assets/img/power.svg" alt="voler">
 
-            <a href="http://cuk.org.uy/" class="volver">
+                <a href="http://cuk.org.uy/" class="volver">
 
-            </a>
+                </a>
         </div>
     </header>
     <main class="home">
-        <!-- TABLA TORNEO -->
-        <section class="formatoTablas visible" id="inicioTorneo">
+
+        <!-- TABLA PARTICIPANTE -->
+        <section class="formatoTablas visible" id="inicioParticipante>
             <section class="formato">
                 <div class="nombreTabla">
-                    <h3>Torneo</h3>
+                    <h3>Participante</h3>
                 </div>
                 <div class="table-responsive">
                     <table class="table">
                         <thead class="table-dark align-middle">
                             <tr>
-                                <th>ID</th>
+                                <th>CI</th>
                                 <th>Nombre</th>
-                                <th>Fecha</th>
-                                <th>Estado</th>
-                                <th>Acceder</th>
+                                <th>Apellido</th>
+                                <th>Escuela</th>
+                                <th>Kata</th>
+                                <th>Cinturon</th>
+                                <th>Torneo</th>
+                                <th>Categoria</th>
+                                <th>Puntuar</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            foreach ($torneoData as $torneo) {
+                            foreach ($participanteData as $participante) {
                                 echo "<tr>";
-                                echo "<td>{$torneo['idTorneo']}</td>";
-                                echo "<td>{$torneo['nombreTorneo']}</td>";
-                                echo "<td>{$torneo['Fecha']}</td>";
-                                echo "<td>{$torneo['Estado']}</td>";
-                                echo "<td><a href='index.php?c=puntaje&a=categoriaJuez&id=" . $torneo["idTorneo"] . "' class='btn btn-success'>Acceder</a></td>";
+                                echo "<td>{$participante['CI']}</td>";
+                                echo "<td>{$participante['Nombre']}</td>";
+                                echo "<td>{$participante['Apellido']}</td>";
+                                echo "<td>{$participante['Escuela']}</td>";
+                                echo "<td>{$participante['nombreKata']}</td>";
+                                echo "<td>{$participante['Cinturon']}</td>";
+                                echo "<td>{$participante['idTorneo']}</td>";
+                                echo "<td>{$participante['Edad']}</td>";
+                                echo "<td><a href='index.php?c=puntaje&a=vistaPuntuar&id=" . $participante["CI"] . "' class='btn btn-success'>Puntuar</a></td>";
+
                                 echo "</tr>";
                             }
                             ?>
+
                         </tbody>
                     </table>
                 </div>
