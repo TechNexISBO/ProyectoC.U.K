@@ -123,7 +123,8 @@ class puntaje_model
 
     public function get_participante()
     {
-        $sql = "SELECT PA.CI, P.Nombre, P.Apellido, PA.Escuela, K.nombreKata, K.idKata, PAR.Cinturon, PAR.idTorneo, C.Edad, C.idCategoria  FROM participante PA
+        $sql = "SELECT PA.CI, P.Nombre, P.Apellido, PA.Escuela, K.nombreKata, K.idKata, PAR.Cinturon, PAR.idTorneo, C.Edad, C.idCategoria
+        FROM participante PA
         JOIN persona P ON P.CI = PA.CI
         JOIN participar PAR ON PAR.CI_P = PA.CI
         JOIN categoria C ON C.idCategoria = PAR.idCategoria

@@ -64,4 +64,15 @@ class llavesController
         header("Location: index.php?c=llaves&a=gestionar&id=$idTorneo");
 
     }
+
+    //KATA 
+    public function agregarKata()
+    {
+        $CI_P = $_POST['CI_P'];
+        $idKata = $_POST['idKata'];
+
+        $user = new llaves_Model();
+        $user->agregarKata($CI_P, $idKata);
+        $this->gestionar($idTorneo);
+    }
 }

@@ -72,7 +72,7 @@ class llaves_Model
     //Puntaje
     public function get_puntaje($idTorneo)
     {
-        $sql = "SELECT P.CI_P, P.idJuez, P.idKata, C.Edad, C.GeneroC, C.Equipo, P.idTorneo, P.valorTotal 
+        $sql = "SELECT P.CI_P, P.idJuez, P.Valor, P.idKata, C.Edad, C.GeneroC, C.Equipo, P.idTorneo, P.valorTotal 
         FROM puntuar P  
         JOIN categoria C ON C.idCategoria = P.idCategoria
         WHERE P.idTorneo = '$idTorneo' ORDER BY P.idJuez ASC";
@@ -82,6 +82,12 @@ class llaves_Model
         while ($row = $resultado->fetch_assoc()) {
             $this->puntuar[] = $row;
         }
-        return $this->puntuar;
+        return $this->puntuar;  
+    }
+
+    //KATA
+    public function agregarKata($CI_P, $idKata) {
+        $resultadoKata = $this->db->query("INSERT INTO tiene (CI_P, idKata) VALUES
+        ('$CI_P', '$idKata')");
     }
 }
