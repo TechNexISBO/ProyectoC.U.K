@@ -24,6 +24,9 @@ class llavesController
         //CON QUIEN COMPITEN
         $participarData["idTorneo"] = $idTorneo;
         $participarData["Torneo"] = $user->get_participar($idTorneo);
+        
+        //Puntaje
+        $puntajeData["Torneo"] = $user->get_puntaje($idTorneo);
 
         require_once "views/admin/gestionarAdmin.php";
     }

@@ -56,6 +56,7 @@ class puntajeController
 
         // Puedes pasar $idJuez como un parámetro si es necesario en tu función enviarPuntaje
         $user->enviarPuntaje($Valor, $CI_P, $idTorneo, $idKata, $idCategoria, $idJuez);
+        $user->sumarPuntaje($CI_P, $idTorneo);
 
         $this->homeJuez();
     }
