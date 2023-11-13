@@ -179,6 +179,12 @@ class tablas_Model {
         VALUES ('$CI_P', '$idTorneo', '$idCategoria')");
 
     }
+
+    //KATA
+    public function agregarKata($CI_P, $idKata) {
+        $resultadoKata = $this->db->query("INSERT INTO tiene (CI_P, idKata) VALUES
+        ('$CI_P', '$idKata')");
+    }
 }
 
 

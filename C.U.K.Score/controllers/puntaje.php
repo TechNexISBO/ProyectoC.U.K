@@ -12,34 +12,23 @@ class puntajeController
         $user = new  puntaje_Model();
 
         //TABLA TORNEO
-        $torneoData = $user->get_torneo();
+        $participanteData = $user->get_participante();
 
         //KATA
         $kataData = $user->get_kata();
 
         require_once "views/juez/homeJuez.php";
     }
-
-    public function categoriaJuez($idTorneo) 
-    {
-        $user = new puntaje_model();
-        
-        //Detectar categorias de un torneo
-        $torneoData["idTorneo"] = $idTorneo;
-        $torneoData["Torneo"] = $user->get_participantes($idTorneo);
-
-        //Participante
-        $participanteData = $user->get_participante($idTorneo);
-
-        require_once "views/juez/participantesJuez.php";
-    }
-
-    public function puntuarJuez($idTorneo, $CI)
+ 
+    public function vistaPuntuar($CI)
     {
         $user = new puntaje_model();
 
-        
-    }
+        $participanteData["CI"] = $CI;
+        $participanteData["Participante"] = $user->get_participas($CI);
 
-    
+        $data = $user->get_participante();
+
+        require_once "views/juez/vistaPuntuar.php";
+    }
 }

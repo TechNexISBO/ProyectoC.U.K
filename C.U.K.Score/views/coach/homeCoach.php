@@ -55,7 +55,7 @@ if (isset($_SESSION['CI_C'])) {
             <section class="miniFormulario">
 
                 <div class="nombreForm">
-                    <h2>Ingrese a un Paricipante</h2>
+                    <h2>Ingrese a un Participante</h2>
                     <p><span class="nombreApp">C.U.K.Score</span> espera con ansias a su alumno</p>
                 </div>
 
