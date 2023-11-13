@@ -1,5 +1,6 @@
 <?php
-class usuarioController {
+class usuarioController
+{
 
     public function __construct()
     {
@@ -52,17 +53,18 @@ class usuarioController {
                     header("Location: index.php?c=tablas&a=tablasCoach");
                     break;
                 default:
-                require_once("index.php");
-                echo '<h1 class="error">TIPO DE USUARIO DESCONOCIDO</h1>';
-                break;
+                    require_once("index.php");
+                    echo '<h1 class="error">TIPO DE USUARIO DESCONOCIDO</h1>';
+                    break;
             }
         } else {
-            require_once("index.php");   
+            require_once("index.php");
             echo '<h1 class="error">ERROR EN LA AUTENTICACIÓN</h1>';
         }
     }
 
-    public function validarJuez() {
+    public function validarJuez()
+    {
 
         session_start();
         $idJuez = $_POST['idJuez'];
@@ -82,10 +84,9 @@ class usuarioController {
         }
     }
 
-    public function cerrar(){
+    public function cerrar()
+    {
         session_destroy();
         require_once "views/inicio.html";
-
     }
-
 }
