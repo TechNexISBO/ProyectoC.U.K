@@ -136,7 +136,7 @@ class puntaje_model
             $this->participante[] = $row;
         }
 
-        return $this->participante; 
+        return $this->participante;
     }
 
     //Puntaje 
@@ -145,8 +145,18 @@ class puntaje_model
         $sql = "INSERT INTO puntuar (Valor, CI_P, idTorneo, idKata, idCategoria, idJuez) 
         VALUES ($Valor, $CI_P, $idTorneo, $idKata, $idCategoria, $idJuez)";
         $this->db->query($sql);
-
     }
 
+    public function sumarPuntaje($CI_P, $idTorneo)
+    {
+        $sql = "  UPDATE puntuar 
+        SET valorTotal = (
+        SELECT SUM(Valor)
+        FROM puntuar 
+        WHERE CI_P = '$CI_P' AND idTorneo = '$idTorneo')
+        WHERE CI_P = '$CI_P' AND idTorneo = '$idTorneo'";
+        
+        $this->db->query($sql);
 
+    }
 }

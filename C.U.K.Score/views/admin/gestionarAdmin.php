@@ -132,34 +132,33 @@ if (isset($_SESSION['CI_A'])) {
             <section class="formato">
                 <div class="nombreTabla">
                     <h3>Puntajes</h3>
-                    <form action="index.php?c=llaves&a=organizar" method="post">
-                        <!-- Campo oculto para enviar el idTorneo al servidor -->
-                        <input type="hidden" name="idTorneo" value="<?php echo $torneoData["idTorneo"]; ?>">
-                        <!-- Botón para enviar el formulario -->
-                        <button type="submit" class="btn btn-primary">ORGANIZAR</button>
-                    </form>
-
                 </div>
                 <div class="table-responsive">
                     <table class="table">
                         <thead class="table-dark align-middle">
                             <tr>
                                 <th>CI</th>
+                                <th>N°Juez</th>
+                                <th>Kata</th>
                                 <th>Categoria</th>
-                                <th>Ronda</th>
-                                <th>Cinturon</th>
-                                <th>Compite</th>
+                                <th>Genero</th>
+                                <th>Equipo</th>
+                                <th>Torneo</th>
+                                <th>Valor Total</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            foreach ($participarData["Torneo"] as $compiten) {
+                            foreach ($puntajeData["Torneo"] as $puntaje) {
                                 echo "<tr>";
-                                echo "<td>{$compiten['CI_P']}</td>";
-                                echo "<td>{$compiten['idCategoria']}</td>";
-                                echo "<td>{$compiten['Ronda']}</td>";
-                                echo "<td>{$compiten['Cinturon']}</td>";
-                                echo "<td>{$compiten['Compite']}</td>";
+                                echo "<td>{$puntaje['CI_P']}</td>";
+                                echo "<td>{$puntaje['idJuez']}</td>";
+                                echo "<td>{$puntaje['idKata']}</td>";
+                                echo "<td>{$puntaje['Edad']}</td>";
+                                echo "<td>{$puntaje['GeneroC']}</td>";
+                                echo "<td>{$puntaje['Equipo']}</td>";
+                                echo "<td>{$puntaje['idTorneo']}</td>";
+                                echo "<td>{$puntaje['valorTotal']}</td>";
                                 echo "</tr>";
                             }
                             ?>
